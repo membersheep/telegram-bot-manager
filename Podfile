@@ -7,8 +7,3 @@ target 'TelegramBotManager' do
   pod 'SwiftyDB', '~> 1.0'
   pod 'Alamofire', '~> 3.3'
 end
-
-target 'TelegramBotManagerTests' do
-  pod 'Quick', '~> 0.9'
-  pod 'Nimble', '~> 3.2'
-end

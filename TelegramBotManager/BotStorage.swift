@@ -9,7 +9,7 @@
 import Foundation
 
 protocol BotStorage {
-    func getSavedBots() -> [Bot]
+    var storedBots: [Bot] {get}
     func saveBot(bot: Bot)
 }
 

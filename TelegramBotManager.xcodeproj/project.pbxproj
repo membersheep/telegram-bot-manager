@@ -21,6 +21,7 @@
 		1BCF99CF1CAABE36000AAACE /* BotListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCF99CE1CAABE36000AAACE /* BotListViewModel.swift */; };
 		1BCF99D11CAAC164000AAACE /* BotCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCF99D01CAAC164000AAACE /* BotCellViewModelTests.swift */; };
 		1BCF99D31CAAC347000AAACE /* BotListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCF99D21CAAC347000AAACE /* BotListViewModelTests.swift */; };
+		1BCF99D51CAADC99000AAACE /* BotListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCF99D41CAADC99000AAACE /* BotListTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		1BCF99CE1CAABE36000AAACE /* BotListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BotListViewModel.swift; sourceTree = "<group>"; };
 		1BCF99D01CAAC164000AAACE /* BotCellViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BotCellViewModelTests.swift; sourceTree = "<group>"; };
 		1BCF99D21CAAC347000AAACE /* BotListViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BotListViewModelTests.swift; sourceTree = "<group>"; };
+		1BCF99D41CAADC99000AAACE /* BotListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BotListTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,8 @@
 			isa = PBXGroup;
 			children = (
 				1B9FA1E61CA578FB00C584AF /* AppDelegate.swift */,
+				1B9FA1EA1CA578FB00C584AF /* Main.storyboard */,
+				1B9FA1EF1CA578FB00C584AF /* LaunchScreen.storyboard */,
 				1B9FA20B1CA57F2800C584AF /* Views */,
 				1B9FA20A1CA57F1D00C584AF /* ViewControllers */,
 				1B9FA2091CA57F1300C584AF /* ViewModels */,
@@ -154,8 +158,7 @@
 		1B9FA20B1CA57F2800C584AF /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1B9FA1EA1CA578FB00C584AF /* Main.storyboard */,
-				1B9FA1EF1CA578FB00C584AF /* LaunchScreen.storyboard */,
+				1BCF99D41CAADC99000AAACE /* BotListTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				1B9FA21B1CA5899E00C584AF /* TextPresentable.swift in Sources */,
 				1B9FA1E91CA578FB00C584AF /* BotListViewController.swift in Sources */,
 				1B9FA2161CA57FF400C584AF /* BotStorage.swift in Sources */,
+				1BCF99D51CAADC99000AAACE /* BotListTableViewCell.swift in Sources */,
 				1B9FA21E1CA5971A00C584AF /* BotStorageDefaults.swift in Sources */,
 				1B9FA2101CA57F9200C584AF /* BotCellViewModel.swift in Sources */,
 				1B9FA1E71CA578FB00C584AF /* AppDelegate.swift in Sources */,

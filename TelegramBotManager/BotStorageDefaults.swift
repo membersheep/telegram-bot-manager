@@ -30,4 +30,12 @@ struct BotStorageDefaults: BotStorage {
         }
         defaults.synchronize()
     }
+    
+    func removeBotNamed(name: String) {
+        if var unwrappedDictionary = defaults.dictionaryForKey(BOT_DICTIONARY_KEY) as? [String: String] {
+            unwrappedDictionary.removeValueForKey(name)
+            defaults.setObject(unwrappedDictionary, forKey: BOT_DICTIONARY_KEY)
+        }
+        defaults.synchronize()
+    }
 }

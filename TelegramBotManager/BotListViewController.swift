@@ -11,12 +11,15 @@ import UIKit
 class BotListViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var addButton: CircularAddButton!
     
     var viewModel: BotListViewModel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.edgesForExtendedLayout = UIRectEdge.None
+        addButton.circleColor = UIColor.lightMainColor()
+        
         assert(viewModel != nil, "View model must be set when displaying this controller")
         
         tableView.delegate = self

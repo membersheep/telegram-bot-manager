@@ -25,6 +25,7 @@
 		1BCF99D91CABD013000AAACE /* BotListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCF99D81CABD013000AAACE /* BotListViewControllerTests.swift */; };
 		1BCF99E81CABD25D000AAACE /* BotStorageMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCF99E71CABD25D000AAACE /* BotStorageMock.swift */; };
 		1BCF99EC1CABF5ED000AAACE /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCF99EB1CABF5ED000AAACE /* ThemeManager.swift */; };
+		1BCF99EE1CAC0CB9000AAACE /* CircularAddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCF99ED1CAC0CB9000AAACE /* CircularAddButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		1BCF99D81CABD013000AAACE /* BotListViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BotListViewControllerTests.swift; sourceTree = "<group>"; };
 		1BCF99E71CABD25D000AAACE /* BotStorageMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BotStorageMock.swift; sourceTree = "<group>"; };
 		1BCF99EB1CABF5ED000AAACE /* ThemeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		1BCF99ED1CAC0CB9000AAACE /* CircularAddButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularAddButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				1BCF99D41CAADC99000AAACE /* BotListTableViewCell.swift */,
+				1BCF99ED1CAC0CB9000AAACE /* CircularAddButton.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				1B9FA21B1CA5899E00C584AF /* TextPresentable.swift in Sources */,
 				1B9FA1E91CA578FB00C584AF /* BotListViewController.swift in Sources */,
 				1B9FA2161CA57FF400C584AF /* BotStorage.swift in Sources */,
+				1BCF99EE1CAC0CB9000AAACE /* CircularAddButton.swift in Sources */,
 				1BCF99D51CAADC99000AAACE /* BotListTableViewCell.swift in Sources */,
 				1B9FA21E1CA5971A00C584AF /* BotStorageDefaults.swift in Sources */,
 				1B9FA2101CA57F9200C584AF /* BotCellViewModel.swift in Sources */,

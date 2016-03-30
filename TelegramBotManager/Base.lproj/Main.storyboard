@@ -65,18 +65,31 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TnY-4D-bgK" customClass="CircularAddButton" customModule="TelegramBotManager" customModuleProvider="target">
+                                <rect key="frame" x="302" y="590" width="57" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="57" id="5nQ-A2-yE1"/>
+                                    <constraint firstAttribute="height" constant="57" id="fky-Rt-B1L"/>
+                                </constraints>
+                                <state key="normal" title="TEST">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Hx7-Xz-LUc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="0yz-3N-qF8"/>
                             <constraint firstItem="Hx7-Xz-LUc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="CwF-RP-wJf"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="TnY-4D-bgK" secondAttribute="bottom" constant="20" id="Lzi-Lx-UbT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Hx7-Xz-LUc" secondAttribute="trailing" constant="-20" id="MUg-82-IrI"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Hx7-Xz-LUc" secondAttribute="bottom" id="YkK-jn-eTc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TnY-4D-bgK" secondAttribute="trailing" id="wpu-Di-f5N"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Bot List" id="dmN-aT-a7C"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="addButton" destination="TnY-4D-bgK" id="oAG-w3-eqY"/>
                         <outlet property="tableView" destination="Hx7-Xz-LUc" id="kIh-Rh-MgY"/>
                     </connections>
                 </viewController>

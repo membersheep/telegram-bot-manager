@@ -13,9 +13,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        ThemeManager.applyTheme()
+        
+        guard let navigationController = window?.rootViewController as? UINavigationController else {
+            return true
+        }
+        guard let listController = navigationController.topViewController as? BotListViewController else {
+            return true
+        }
+        let botStorage = BotStorageDefaults()
+        botStorage.saveBot(Bot(name: "test", token: "test"))
+        listController.viewModel = BotListViewModel(botStorage: botStorage)
         return true
     }
 

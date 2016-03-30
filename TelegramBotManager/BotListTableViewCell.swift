@@ -11,11 +11,12 @@ import UIKit
 
 class BotListTableViewCell: UITableViewCell {
     
+    static let identifier = "BotListTableViewCell"
+    
     @IBOutlet private weak var label: UILabel!
     
     private var delegate: TextPresentable?
     
-    // configure with something that conforms to the composed protocol
     func configure(withViewModel viewModel: TextPresentable) {
         delegate = viewModel
         label.text = viewModel.text

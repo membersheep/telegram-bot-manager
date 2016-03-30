@@ -28,6 +28,26 @@ extension BotListViewController: UITableViewDelegate {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         // TODO: Go to Detail controller
     }
+    
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if (editingStyle == .Delete) {
+            guard let listViewModel = self.viewModel else {
+                return
+            }
+            listViewModel.removeBotNamed(listViewModel.botList[indexPath.row].text)
+            reloadWithAnimation()
+        }
+    }
+    
+    func reloadWithAnimation() {
+        let range = NSMakeRange(0, tableView.numberOfSections)
+        let sections = NSIndexSet(indexesInRange: range)
+        tableView.reloadSections(sections, withRowAnimation: .Automatic)
+    }
 }
 
 extension BotListViewController: UITableViewDataSource {

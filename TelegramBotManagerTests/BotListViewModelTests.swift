@@ -27,7 +27,7 @@ class BotListViewModelTests: XCTestCase {
         XCTAssertNotNil(botListViewModel)
     }
     
-    func testBotCellViewModelListCount() {
+    func testBotListViewModelCount() {
         XCTAssertEqual(botListViewModel?.botList.count, 0)
         XCTAssertEqual(botStorage.storedBots.count, 0)
         
@@ -45,7 +45,7 @@ class BotListViewModelTests: XCTestCase {
         XCTAssertEqual(botListViewModel?.botList.count, 2)
     }
     
-    func testBotCellViewModelListHasCorrectViewModels() {
+    func testBotListViewModelHasCorrectViewModels() {
         botStorage.saveBot(Bot(name: "test1", token: "token"))
         
         XCTAssertEqual(botListViewModel?.botList.first?.text, "test1")
@@ -53,6 +53,14 @@ class BotListViewModelTests: XCTestCase {
         botStorage.saveBot(Bot(name: "test2", token: "token"))
         
         XCTAssertEqual(botListViewModel?.botList.filter({$0.text == "test1" || $0.text == "test2"}).count, 2)
+    }
+    
+    func testBotListViewModelRemove() {
+        botStorage.saveBot(Bot(name: "test1", token: "token"))
+        
+        botListViewModel?.removeBotNamed("test1")
+        
+        XCTAssertEqual(botListViewModel?.botList.count, 0)
     }
 }
 

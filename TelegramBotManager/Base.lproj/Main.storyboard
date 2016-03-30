@@ -36,15 +36,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Hx7-Xz-LUc">
-                                <rect key="frame" x="16" y="64" width="343" height="603"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Hx7-Xz-LUc">
+                                <rect key="frame" x="-4" y="64" width="383" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BotListTableViewCell" id="VCG-0U-3Rs" customClass="BotListTableViewCell" customModule="TelegramBotManager" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="343" height="44"/>
+                                        <rect key="frame" x="0.0" y="92" width="383" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VCG-0U-3Rs" id="Vid-nf-0hH">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pGJ-oT-bde">
@@ -68,9 +68,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Hx7-Xz-LUc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="0yz-3N-qF8"/>
+                            <constraint firstItem="Hx7-Xz-LUc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="0yz-3N-qF8"/>
                             <constraint firstItem="Hx7-Xz-LUc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="CwF-RP-wJf"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Hx7-Xz-LUc" secondAttribute="trailing" id="MUg-82-IrI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Hx7-Xz-LUc" secondAttribute="trailing" constant="-20" id="MUg-82-IrI"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Hx7-Xz-LUc" secondAttribute="bottom" id="YkK-jn-eTc"/>
                         </constraints>
                     </view>

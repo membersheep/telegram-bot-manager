@@ -9,10 +9,16 @@
 import Foundation
 
 struct BotListViewModel {
+    
     var botStorage: BotStorage
+    
     var botList: [BotCellViewModel] {
         return botStorage.storedBots.map {
             BotCellViewModel(botModel:$0)
         }
+    }
+    
+    func removeBotNamed(name: String) {
+        botStorage.removeBotNamed(name)
     }
 }

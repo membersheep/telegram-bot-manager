@@ -24,6 +24,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         let botStorage = BotStorageDefaults()
         botStorage.saveBot(Bot(name: "test", token: "test"))
+        botStorage.saveBot(Bot(name: "test1", token: "test"))
+        botStorage.saveBot(Bot(name: "test2", token: "test"))
+        botStorage.saveBot(Bot(name: "test3", token: "test"))
         listController.viewModel = BotListViewModel(botStorage: botStorage)
         return true
     }

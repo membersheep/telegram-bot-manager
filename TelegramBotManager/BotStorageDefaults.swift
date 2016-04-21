@@ -13,29 +13,23 @@ struct BotStorageDefaults: BotStorage {
     private let defaults = NSUserDefaults.standardUserDefaults()
     
     var storedBots: [Bot] {
-        guard let dictionary = defaults.dictionaryForKey(BOT_DICTIONARY_KEY) as? [String: String] else {
-            return []
-        }
+        let dictionary = defaults.dictionaryForKey(BOT_DICTIONARY_KEY) as? [String: String] ?? [:]
         return dictionary.map{ key, value in
             Bot(name: key, token: value)
         }
     }
     
     func saveBot(bot: Bot) {
-        if var unwrappedDictionary = defaults.dictionaryForKey(BOT_DICTIONARY_KEY) as? [String: String] {
-            unwrappedDictionary[bot.name] = bot.token
-            defaults.setObject(unwrappedDictionary, forKey: BOT_DICTIONARY_KEY)
-        } else {
-            defaults.setObject(NSDictionary(dictionary: [bot.name:bot.token]), forKey: BOT_DICTIONARY_KEY)
-        }
+        var dictionary = defaults.dictionaryForKey(BOT_DICTIONARY_KEY) as? [String: String] ?? [:]
+        dictionary[bot.name] = bot.token
+        defaults.setObject(dictionary, forKey: BOT_DICTIONARY_KEY)
         defaults.synchronize()
     }
     
     func removeBotNamed(name: String) {
-        if var unwrappedDictionary = defaults.dictionaryForKey(BOT_DICTIONARY_KEY) as? [String: String] {
-            unwrappedDictionary.removeValueForKey(name)
-            defaults.setObject(unwrappedDictionary, forKey: BOT_DICTIONARY_KEY)
-        }
+        var dictionary = defaults.dictionaryForKey(BOT_DICTIONARY_KEY) as? [String: String] ?? [:]
+        dictionary.removeValueForKey(name)
+        defaults.setObject(dictionary, forKey: BOT_DICTIONARY_KEY)
         defaults.synchronize()
     }
 }

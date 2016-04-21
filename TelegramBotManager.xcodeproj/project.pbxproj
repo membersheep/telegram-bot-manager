@@ -1,516 +1,1302 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		1B9FA1E71CA578FB00C584AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9FA1E61CA578FB00C584AF /* AppDelegate.swift */; };
-		1B9FA1E91CA578FB00C584AF /* BotListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9FA1E81CA578FB00C584AF /* BotListViewController.swift */; };
-		1B9FA1EC1CA578FB00C584AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B9FA1EA1CA578FB00C584AF /* Main.storyboard */; };
-		1B9FA1EE1CA578FB00C584AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B9FA1ED1CA578FB00C584AF /* Assets.xcassets */; };
-		1B9FA1F11CA578FB00C584AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B9FA1EF1CA578FB00C584AF /* LaunchScreen.storyboard */; };
-		1B9FA1FC1CA578FB00C584AF /* BotStorageDefaultsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9FA1FB1CA578FB00C584AF /* BotStorageDefaultsTests.swift */; };
-		1B9FA2101CA57F9200C584AF /* BotCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9FA20F1CA57F9200C584AF /* BotCellViewModel.swift */; };
-		1B9FA2131CA57FDD00C584AF /* Bot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9FA2121CA57FDD00C584AF /* Bot.swift */; };
-		1B9FA2161CA57FF400C584AF /* BotStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9FA2151CA57FF400C584AF /* BotStorage.swift */; };
-		1B9FA21B1CA5899E00C584AF /* TextPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9FA21A1CA5899E00C584AF /* TextPresentable.swift */; };
-		1B9FA21E1CA5971A00C584AF /* BotStorageDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9FA21D1CA5971A00C584AF /* BotStorageDefaults.swift */; };
-		1BCF99CF1CAABE36000AAACE /* BotListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCF99CE1CAABE36000AAACE /* BotListViewModel.swift */; };
-		1BCF99D11CAAC164000AAACE /* BotCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCF99D01CAAC164000AAACE /* BotCellViewModelTests.swift */; };
-		1BCF99D31CAAC347000AAACE /* BotListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCF99D21CAAC347000AAACE /* BotListViewModelTests.swift */; };
-		1BCF99D51CAADC99000AAACE /* BotListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCF99D41CAADC99000AAACE /* BotListTableViewCell.swift */; };
-		1BCF99D91CABD013000AAACE /* BotListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCF99D81CABD013000AAACE /* BotListViewControllerTests.swift */; };
-		1BCF99E81CABD25D000AAACE /* BotStorageMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCF99E71CABD25D000AAACE /* BotStorageMock.swift */; };
-		1BCF99EC1CABF5ED000AAACE /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCF99EB1CABF5ED000AAACE /* ThemeManager.swift */; };
-		1BCF99EE1CAC0CB9000AAACE /* CircularAddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCF99ED1CAC0CB9000AAACE /* CircularAddButton.swift */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		1B9FA1F81CA578FB00C584AF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1B9FA1DB1CA578FB00C584AF /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1B9FA1E21CA578FB00C584AF;
-			remoteInfo = TelegramBotManager;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		1B9FA1E31CA578FB00C584AF /* TelegramBotManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TelegramBotManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		1B9FA1E61CA578FB00C584AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1B9FA1E81CA578FB00C584AF /* BotListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotListViewController.swift; sourceTree = "<group>"; };
-		1B9FA1EB1CA578FB00C584AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		1B9FA1ED1CA578FB00C584AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		1B9FA1F01CA578FB00C584AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		1B9FA1F21CA578FB00C584AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1B9FA1F71CA578FB00C584AF /* TelegramBotManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TelegramBotManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1B9FA1FB1CA578FB00C584AF /* BotStorageDefaultsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotStorageDefaultsTests.swift; sourceTree = "<group>"; };
-		1B9FA1FD1CA578FB00C584AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1B9FA20F1CA57F9200C584AF /* BotCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BotCellViewModel.swift; sourceTree = "<group>"; };
-		1B9FA2121CA57FDD00C584AF /* Bot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bot.swift; sourceTree = "<group>"; };
-		1B9FA2151CA57FF400C584AF /* BotStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BotStorage.swift; sourceTree = "<group>"; };
-		1B9FA21A1CA5899E00C584AF /* TextPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextPresentable.swift; sourceTree = "<group>"; };
-		1B9FA21D1CA5971A00C584AF /* BotStorageDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BotStorageDefaults.swift; sourceTree = "<group>"; };
-		1BCF99CE1CAABE36000AAACE /* BotListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BotListViewModel.swift; sourceTree = "<group>"; };
-		1BCF99D01CAAC164000AAACE /* BotCellViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BotCellViewModelTests.swift; sourceTree = "<group>"; };
-		1BCF99D21CAAC347000AAACE /* BotListViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BotListViewModelTests.swift; sourceTree = "<group>"; };
-		1BCF99D41CAADC99000AAACE /* BotListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BotListTableViewCell.swift; sourceTree = "<group>"; };
-		1BCF99D81CABD013000AAACE /* BotListViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BotListViewControllerTests.swift; sourceTree = "<group>"; };
-		1BCF99E71CABD25D000AAACE /* BotStorageMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BotStorageMock.swift; sourceTree = "<group>"; };
-		1BCF99EB1CABF5ED000AAACE /* ThemeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
-		1BCF99ED1CAC0CB9000AAACE /* CircularAddButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularAddButton.swift; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		1B9FA1E01CA578FB00C584AF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1B9FA1F41CA578FB00C584AF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		1B9FA1DA1CA578FB00C584AF = {
-			isa = PBXGroup;
-			children = (
-				1B9FA1E51CA578FB00C584AF /* TelegramBotManager */,
-				1B9FA1FA1CA578FB00C584AF /* TelegramBotManagerTests */,
-				1B9FA1E41CA578FB00C584AF /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		1B9FA1E41CA578FB00C584AF /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				1B9FA1E31CA578FB00C584AF /* TelegramBotManager.app */,
-				1B9FA1F71CA578FB00C584AF /* TelegramBotManagerTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		1B9FA1E51CA578FB00C584AF /* TelegramBotManager */ = {
-			isa = PBXGroup;
-			children = (
-				1B9FA1E61CA578FB00C584AF /* AppDelegate.swift */,
-				1B9FA1EA1CA578FB00C584AF /* Main.storyboard */,
-				1B9FA1EF1CA578FB00C584AF /* LaunchScreen.storyboard */,
-				1B9FA20B1CA57F2800C584AF /* Views */,
-				1B9FA20A1CA57F1D00C584AF /* ViewControllers */,
-				1B9FA2091CA57F1300C584AF /* ViewModels */,
-				1B9FA2061CA5794C00C584AF /* Models */,
-				1B9FA2081CA5798A00C584AF /* Services */,
-				1B9FA2181CA588EB00C584AF /* Protocols */,
-				1B9FA1ED1CA578FB00C584AF /* Assets.xcassets */,
-				1B9FA1F21CA578FB00C584AF /* Info.plist */,
-			);
-			path = TelegramBotManager;
-			sourceTree = "<group>";
-		};
-		1B9FA1FA1CA578FB00C584AF /* TelegramBotManagerTests */ = {
-			isa = PBXGroup;
-			children = (
-				1BCF99E61CABD24B000AAACE /* Mocks */,
-				1B9FA1FD1CA578FB00C584AF /* Info.plist */,
-				1B9FA1FB1CA578FB00C584AF /* BotStorageDefaultsTests.swift */,
-				1BCF99D01CAAC164000AAACE /* BotCellViewModelTests.swift */,
-				1BCF99D21CAAC347000AAACE /* BotListViewModelTests.swift */,
-				1BCF99D81CABD013000AAACE /* BotListViewControllerTests.swift */,
-			);
-			path = TelegramBotManagerTests;
-			sourceTree = "<group>";
-		};
-		1B9FA2061CA5794C00C584AF /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				1B9FA2121CA57FDD00C584AF /* Bot.swift */,
-			);
-			name = Models;
-			sourceTree = "<group>";
-		};
-		1B9FA2081CA5798A00C584AF /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				1B9FA2151CA57FF400C584AF /* BotStorage.swift */,
-				1B9FA21D1CA5971A00C584AF /* BotStorageDefaults.swift */,
-				1BCF99EB1CABF5ED000AAACE /* ThemeManager.swift */,
-			);
-			name = Services;
-			sourceTree = "<group>";
-		};
-		1B9FA2091CA57F1300C584AF /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				1BCF99CE1CAABE36000AAACE /* BotListViewModel.swift */,
-				1B9FA20F1CA57F9200C584AF /* BotCellViewModel.swift */,
-			);
-			name = ViewModels;
-			sourceTree = "<group>";
-		};
-		1B9FA20A1CA57F1D00C584AF /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				1B9FA1E81CA578FB00C584AF /* BotListViewController.swift */,
-			);
-			name = ViewControllers;
-			sourceTree = "<group>";
-		};
-		1B9FA20B1CA57F2800C584AF /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				1BCF99D41CAADC99000AAACE /* BotListTableViewCell.swift */,
-				1BCF99ED1CAC0CB9000AAACE /* CircularAddButton.swift */,
-			);
-			name = Views;
-			sourceTree = "<group>";
-		};
-		1B9FA2181CA588EB00C584AF /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				1B9FA21A1CA5899E00C584AF /* TextPresentable.swift */,
-			);
-			name = Protocols;
-			sourceTree = "<group>";
-		};
-		1BCF99E61CABD24B000AAACE /* Mocks */ = {
-			isa = PBXGroup;
-			children = (
-				1BCF99E71CABD25D000AAACE /* BotStorageMock.swift */,
-			);
-			name = Mocks;
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		1B9FA1E21CA578FB00C584AF /* TelegramBotManager */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1B9FA2001CA578FB00C584AF /* Build configuration list for PBXNativeTarget "TelegramBotManager" */;
-			buildPhases = (
-				1B9FA1DF1CA578FB00C584AF /* Sources */,
-				1B9FA1E01CA578FB00C584AF /* Frameworks */,
-				1B9FA1E11CA578FB00C584AF /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = TelegramBotManager;
-			productName = TelegramBotManager;
-			productReference = 1B9FA1E31CA578FB00C584AF /* TelegramBotManager.app */;
-			productType = "com.apple.product-type.application";
-		};
-		1B9FA1F61CA578FB00C584AF /* TelegramBotManagerTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1B9FA2031CA578FB00C584AF /* Build configuration list for PBXNativeTarget "TelegramBotManagerTests" */;
-			buildPhases = (
-				1B9FA1F31CA578FB00C584AF /* Sources */,
-				1B9FA1F41CA578FB00C584AF /* Frameworks */,
-				1B9FA1F51CA578FB00C584AF /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1B9FA1F91CA578FB00C584AF /* PBXTargetDependency */,
-			);
-			name = TelegramBotManagerTests;
-			productName = TelegramBotManagerTests;
-			productReference = 1B9FA1F71CA578FB00C584AF /* TelegramBotManagerTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		1B9FA1DB1CA578FB00C584AF /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
-				ORGANIZATIONNAME = membersheep;
-				TargetAttributes = {
-					1B9FA1E21CA578FB00C584AF = {
-						CreatedOnToolsVersion = 7.3;
-					};
-					1B9FA1F61CA578FB00C584AF = {
-						CreatedOnToolsVersion = 7.3;
-						TestTargetID = 1B9FA1E21CA578FB00C584AF;
-					};
-				};
-			};
-			buildConfigurationList = 1B9FA1DE1CA578FB00C584AF /* Build configuration list for PBXProject "TelegramBotManager" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-				Base,
-			);
-			mainGroup = 1B9FA1DA1CA578FB00C584AF;
-			productRefGroup = 1B9FA1E41CA578FB00C584AF /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				1B9FA1E21CA578FB00C584AF /* TelegramBotManager */,
-				1B9FA1F61CA578FB00C584AF /* TelegramBotManagerTests */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		1B9FA1E11CA578FB00C584AF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1B9FA1F11CA578FB00C584AF /* LaunchScreen.storyboard in Resources */,
-				1B9FA1EE1CA578FB00C584AF /* Assets.xcassets in Resources */,
-				1B9FA1EC1CA578FB00C584AF /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1B9FA1F51CA578FB00C584AF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		1B9FA1DF1CA578FB00C584AF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1B9FA21B1CA5899E00C584AF /* TextPresentable.swift in Sources */,
-				1B9FA1E91CA578FB00C584AF /* BotListViewController.swift in Sources */,
-				1B9FA2161CA57FF400C584AF /* BotStorage.swift in Sources */,
-				1BCF99EE1CAC0CB9000AAACE /* CircularAddButton.swift in Sources */,
-				1BCF99D51CAADC99000AAACE /* BotListTableViewCell.swift in Sources */,
-				1B9FA21E1CA5971A00C584AF /* BotStorageDefaults.swift in Sources */,
-				1B9FA2101CA57F9200C584AF /* BotCellViewModel.swift in Sources */,
-				1B9FA1E71CA578FB00C584AF /* AppDelegate.swift in Sources */,
-				1BCF99EC1CABF5ED000AAACE /* ThemeManager.swift in Sources */,
-				1BCF99CF1CAABE36000AAACE /* BotListViewModel.swift in Sources */,
-				1B9FA2131CA57FDD00C584AF /* Bot.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1B9FA1F31CA578FB00C584AF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1BCF99E81CABD25D000AAACE /* BotStorageMock.swift in Sources */,
-				1BCF99D91CABD013000AAACE /* BotListViewControllerTests.swift in Sources */,
-				1BCF99D11CAAC164000AAACE /* BotCellViewModelTests.swift in Sources */,
-				1B9FA1FC1CA578FB00C584AF /* BotStorageDefaultsTests.swift in Sources */,
-				1BCF99D31CAAC347000AAACE /* BotListViewModelTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		1B9FA1F91CA578FB00C584AF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1B9FA1E21CA578FB00C584AF /* TelegramBotManager */;
-			targetProxy = 1B9FA1F81CA578FB00C584AF /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		1B9FA1EA1CA578FB00C584AF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1B9FA1EB1CA578FB00C584AF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		1B9FA1EF1CA578FB00C584AF /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1B9FA1F01CA578FB00C584AF /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
-/* Begin XCBuildConfiguration section */
-		1B9FA1FE1CA578FB00C584AF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "6fafa178-c1a6-4bca-b4c7-95c545dbf858";
-				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		1B9FA1FF1CA578FB00C584AF /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		1B9FA2011CA578FB00C584AF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = TelegramBotManager/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = mem.TelegramBotManager;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		1B9FA2021CA578FB00C584AF /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = TelegramBotManager/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = mem.TelegramBotManager;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		1B9FA2041CA578FB00C584AF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = TelegramBotManagerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = mem.TelegramBotManagerTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TelegramBotManager.app/TelegramBotManager";
-			};
-			name = Debug;
-		};
-		1B9FA2051CA578FB00C584AF /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = TelegramBotManagerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = mem.TelegramBotManagerTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TelegramBotManager.app/TelegramBotManager";
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		1B9FA1DE1CA578FB00C584AF /* Build configuration list for PBXProject "TelegramBotManager" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1B9FA1FE1CA578FB00C584AF /* Debug */,
-				1B9FA1FF1CA578FB00C584AF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1B9FA2001CA578FB00C584AF /* Build configuration list for PBXNativeTarget "TelegramBotManager" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1B9FA2011CA578FB00C584AF /* Debug */,
-				1B9FA2021CA578FB00C584AF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1B9FA2031CA578FB00C584AF /* Build configuration list for PBXNativeTarget "TelegramBotManagerTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1B9FA2041CA578FB00C584AF /* Debug */,
-				1B9FA2051CA578FB00C584AF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = 1B9FA1DB1CA578FB00C584AF /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>0BB333C6366FD3C4FCA35947</key>
+		<dict>
+			<key>fileRef</key>
+			<string>45F4DB791C3430DD0375BAB0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1B9FA1DA1CA578FB00C584AF</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>1B9FA1E51CA578FB00C584AF</string>
+				<string>1B9FA1FA1CA578FB00C584AF</string>
+				<string>1B9FA1E41CA578FB00C584AF</string>
+				<string>9544A8EAC095D27F2F342957</string>
+				<string>4DBC79B5FDD2DAD630456362</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1B9FA1DB1CA578FB00C584AF</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>LastSwiftUpdateCheck</key>
+				<string>0730</string>
+				<key>LastUpgradeCheck</key>
+				<string>0730</string>
+				<key>ORGANIZATIONNAME</key>
+				<string>membersheep</string>
+				<key>TargetAttributes</key>
+				<dict>
+					<key>1B9FA1E21CA578FB00C584AF</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>7.3</string>
+					</dict>
+					<key>1B9FA1F61CA578FB00C584AF</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>7.3</string>
+						<key>TestTargetID</key>
+						<string>1B9FA1E21CA578FB00C584AF</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>1B9FA1DE1CA578FB00C584AF</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+				<string>Base</string>
+			</array>
+			<key>mainGroup</key>
+			<string>1B9FA1DA1CA578FB00C584AF</string>
+			<key>productRefGroup</key>
+			<string>1B9FA1E41CA578FB00C584AF</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>1B9FA1E21CA578FB00C584AF</string>
+				<string>1B9FA1F61CA578FB00C584AF</string>
+			</array>
+		</dict>
+		<key>1B9FA1DE1CA578FB00C584AF</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>1B9FA1FE1CA578FB00C584AF</string>
+				<string>1B9FA1FF1CA578FB00C584AF</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>1B9FA1DF1CA578FB00C584AF</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>1B9FA21B1CA5899E00C584AF</string>
+				<string>1B9FA1E91CA578FB00C584AF</string>
+				<string>1B9FA2161CA57FF400C584AF</string>
+				<string>1BCF99EE1CAC0CB9000AAACE</string>
+				<string>1BCF99D51CAADC99000AAACE</string>
+				<string>1B9FA21E1CA5971A00C584AF</string>
+				<string>1B9FA2101CA57F9200C584AF</string>
+				<string>1B9FA1E71CA578FB00C584AF</string>
+				<string>1BCF99EC1CABF5ED000AAACE</string>
+				<string>1BCF99CF1CAABE36000AAACE</string>
+				<string>1B9FA2131CA57FDD00C584AF</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>1B9FA1E01CA578FB00C584AF</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>0BB333C6366FD3C4FCA35947</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>1B9FA1E11CA578FB00C584AF</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>1B9FA1F11CA578FB00C584AF</string>
+				<string>1B9FA1EE1CA578FB00C584AF</string>
+				<string>1B9FA1EC1CA578FB00C584AF</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>1B9FA1E21CA578FB00C584AF</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>1B9FA2001CA578FB00C584AF</string>
+			<key>buildPhases</key>
+			<array>
+				<string>36C063FD422B01FA783FC703</string>
+				<string>1B9FA1DF1CA578FB00C584AF</string>
+				<string>1B9FA1E01CA578FB00C584AF</string>
+				<string>1B9FA1E11CA578FB00C584AF</string>
+				<string>7BF59D77BD5502B92E669312</string>
+				<string>EF767CAAB49771C501471D29</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>TelegramBotManager</string>
+			<key>productName</key>
+			<string>TelegramBotManager</string>
+			<key>productReference</key>
+			<string>1B9FA1E31CA578FB00C584AF</string>
+			<key>productType</key>
+			<string>com.apple.product-type.application</string>
+		</dict>
+		<key>1B9FA1E31CA578FB00C584AF</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.application</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>TelegramBotManager.app</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>1B9FA1E41CA578FB00C584AF</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>1B9FA1E31CA578FB00C584AF</string>
+				<string>1B9FA1F71CA578FB00C584AF</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1B9FA1E51CA578FB00C584AF</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>1B9FA1E61CA578FB00C584AF</string>
+				<string>1B9FA1EA1CA578FB00C584AF</string>
+				<string>1B9FA1EF1CA578FB00C584AF</string>
+				<string>1B9FA20B1CA57F2800C584AF</string>
+				<string>1B9FA20A1CA57F1D00C584AF</string>
+				<string>1B9FA2091CA57F1300C584AF</string>
+				<string>1B9FA2061CA5794C00C584AF</string>
+				<string>1B9FA2081CA5798A00C584AF</string>
+				<string>1B9FA2181CA588EB00C584AF</string>
+				<string>1B9FA1ED1CA578FB00C584AF</string>
+				<string>1B9FA1F21CA578FB00C584AF</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>TelegramBotManager</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1B9FA1E61CA578FB00C584AF</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>AppDelegate.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1B9FA1E71CA578FB00C584AF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1B9FA1E61CA578FB00C584AF</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1B9FA1E81CA578FB00C584AF</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>BotListViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1B9FA1E91CA578FB00C584AF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1B9FA1E81CA578FB00C584AF</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1B9FA1EA1CA578FB00C584AF</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>1B9FA1EB1CA578FB00C584AF</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1B9FA1EB1CA578FB00C584AF</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1B9FA1EC1CA578FB00C584AF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1B9FA1EA1CA578FB00C584AF</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1B9FA1ED1CA578FB00C584AF</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>folder.assetcatalog</string>
+			<key>path</key>
+			<string>Assets.xcassets</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1B9FA1EE1CA578FB00C584AF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1B9FA1ED1CA578FB00C584AF</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1B9FA1EF1CA578FB00C584AF</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>1B9FA1F01CA578FB00C584AF</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>LaunchScreen.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1B9FA1F01CA578FB00C584AF</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/LaunchScreen.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1B9FA1F11CA578FB00C584AF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1B9FA1EF1CA578FB00C584AF</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1B9FA1F21CA578FB00C584AF</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1B9FA1F31CA578FB00C584AF</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>1BCF99E81CABD25D000AAACE</string>
+				<string>1BCF99D91CABD013000AAACE</string>
+				<string>1BCF99D11CAAC164000AAACE</string>
+				<string>1B9FA1FC1CA578FB00C584AF</string>
+				<string>1BCF99D31CAAC347000AAACE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>1B9FA1F41CA578FB00C584AF</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>1B9FA1F51CA578FB00C584AF</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>1B9FA1F61CA578FB00C584AF</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>1B9FA2031CA578FB00C584AF</string>
+			<key>buildPhases</key>
+			<array>
+				<string>1B9FA1F31CA578FB00C584AF</string>
+				<string>1B9FA1F41CA578FB00C584AF</string>
+				<string>1B9FA1F51CA578FB00C584AF</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>1B9FA1F91CA578FB00C584AF</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>TelegramBotManagerTests</string>
+			<key>productName</key>
+			<string>TelegramBotManagerTests</string>
+			<key>productReference</key>
+			<string>1B9FA1F71CA578FB00C584AF</string>
+			<key>productType</key>
+			<string>com.apple.product-type.bundle.unit-test</string>
+		</dict>
+		<key>1B9FA1F71CA578FB00C584AF</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.cfbundle</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>TelegramBotManagerTests.xctest</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>1B9FA1F81CA578FB00C584AF</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>1B9FA1DB1CA578FB00C584AF</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>1B9FA1E21CA578FB00C584AF</string>
+			<key>remoteInfo</key>
+			<string>TelegramBotManager</string>
+		</dict>
+		<key>1B9FA1F91CA578FB00C584AF</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>1B9FA1E21CA578FB00C584AF</string>
+			<key>targetProxy</key>
+			<string>1B9FA1F81CA578FB00C584AF</string>
+		</dict>
+		<key>1B9FA1FA1CA578FB00C584AF</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>1BCF99E61CABD24B000AAACE</string>
+				<string>1B9FA1FD1CA578FB00C584AF</string>
+				<string>1B9FA1FB1CA578FB00C584AF</string>
+				<string>1BCF99D01CAAC164000AAACE</string>
+				<string>1BCF99D21CAAC347000AAACE</string>
+				<string>1BCF99D81CABD013000AAACE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>TelegramBotManagerTests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1B9FA1FB1CA578FB00C584AF</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>BotStorageDefaultsTests.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1B9FA1FC1CA578FB00C584AF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1B9FA1FB1CA578FB00C584AF</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1B9FA1FD1CA578FB00C584AF</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1B9FA1FE1CA578FB00C584AF</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_ANALYZER_NONNULL</key>
+				<string>YES</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>ENABLE_TESTABILITY</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.3</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>PROVISIONING_PROFILE</key>
+				<string>6fafa178-c1a6-4bca-b4c7-95c545dbf858</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SWIFT_OPTIMIZATION_LEVEL</key>
+				<string>-Onone</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>1B9FA1FF1CA578FB00C584AF</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_ANALYZER_NONNULL</key>
+				<string>YES</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.3</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>1B9FA2001CA578FB00C584AF</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>1B9FA2011CA578FB00C584AF</string>
+				<string>1B9FA2021CA578FB00C584AF</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>1B9FA2011CA578FB00C584AF</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>B550A3E2C7D0DF73F8DD8393</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>INFOPLIST_FILE</key>
+				<string>TelegramBotManager/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>mem.TelegramBotManager</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>1B9FA2021CA578FB00C584AF</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>3C34C3D25A0823FAB4010ADE</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>INFOPLIST_FILE</key>
+				<string>TelegramBotManager/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>mem.TelegramBotManager</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>1B9FA2031CA578FB00C584AF</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>1B9FA2041CA578FB00C584AF</string>
+				<string>1B9FA2051CA578FB00C584AF</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>1B9FA2041CA578FB00C584AF</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(TEST_HOST)</string>
+				<key>INFOPLIST_FILE</key>
+				<string>TelegramBotManagerTests/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>mem.TelegramBotManagerTests</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUILT_PRODUCTS_DIR)/TelegramBotManager.app/TelegramBotManager</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>1B9FA2051CA578FB00C584AF</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(TEST_HOST)</string>
+				<key>INFOPLIST_FILE</key>
+				<string>TelegramBotManagerTests/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>mem.TelegramBotManagerTests</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUILT_PRODUCTS_DIR)/TelegramBotManager.app/TelegramBotManager</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>1B9FA2061CA5794C00C584AF</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>1B9FA2121CA57FDD00C584AF</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Models</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1B9FA2081CA5798A00C584AF</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>1B9FA2151CA57FF400C584AF</string>
+				<string>1B9FA21D1CA5971A00C584AF</string>
+				<string>1BCF99EB1CABF5ED000AAACE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Services</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1B9FA2091CA57F1300C584AF</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>1BCF99CE1CAABE36000AAACE</string>
+				<string>1B9FA20F1CA57F9200C584AF</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>ViewModels</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1B9FA20A1CA57F1D00C584AF</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>1B9FA1E81CA578FB00C584AF</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>ViewControllers</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1B9FA20B1CA57F2800C584AF</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>1BCF99D41CAADC99000AAACE</string>
+				<string>1BCF99ED1CAC0CB9000AAACE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Views</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1B9FA20F1CA57F9200C584AF</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>BotCellViewModel.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1B9FA2101CA57F9200C584AF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1B9FA20F1CA57F9200C584AF</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1B9FA2121CA57FDD00C584AF</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>Bot.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1B9FA2131CA57FDD00C584AF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1B9FA2121CA57FDD00C584AF</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1B9FA2151CA57FF400C584AF</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>BotStorage.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1B9FA2161CA57FF400C584AF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1B9FA2151CA57FF400C584AF</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1B9FA2181CA588EB00C584AF</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>1B9FA21A1CA5899E00C584AF</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Protocols</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1B9FA21A1CA5899E00C584AF</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>TextPresentable.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1B9FA21B1CA5899E00C584AF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1B9FA21A1CA5899E00C584AF</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1B9FA21D1CA5971A00C584AF</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>BotStorageDefaults.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1B9FA21E1CA5971A00C584AF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1B9FA21D1CA5971A00C584AF</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1BCF99CE1CAABE36000AAACE</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>BotListViewModel.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1BCF99CF1CAABE36000AAACE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1BCF99CE1CAABE36000AAACE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1BCF99D01CAAC164000AAACE</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>BotCellViewModelTests.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1BCF99D11CAAC164000AAACE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1BCF99D01CAAC164000AAACE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1BCF99D21CAAC347000AAACE</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>BotListViewModelTests.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1BCF99D31CAAC347000AAACE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1BCF99D21CAAC347000AAACE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1BCF99D41CAADC99000AAACE</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>BotListTableViewCell.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1BCF99D51CAADC99000AAACE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1BCF99D41CAADC99000AAACE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1BCF99D81CABD013000AAACE</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>BotListViewControllerTests.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1BCF99D91CABD013000AAACE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1BCF99D81CABD013000AAACE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1BCF99E61CABD24B000AAACE</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>1BCF99E71CABD25D000AAACE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Mocks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1BCF99E71CABD25D000AAACE</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>BotStorageMock.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1BCF99E81CABD25D000AAACE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1BCF99E71CABD25D000AAACE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1BCF99EB1CABF5ED000AAACE</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>ThemeManager.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1BCF99EC1CABF5ED000AAACE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1BCF99EB1CABF5ED000AAACE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1BCF99ED1CAC0CB9000AAACE</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>CircularAddButton.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1BCF99EE1CAC0CB9000AAACE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1BCF99ED1CAC0CB9000AAACE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>36C063FD422B01FA783FC703</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>3C34C3D25A0823FAB4010ADE</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-TelegramBotManager.release.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-TelegramBotManager/Pods-TelegramBotManager.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>45F4DB791C3430DD0375BAB0</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Pods_TelegramBotManager.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>4DBC79B5FDD2DAD630456362</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>45F4DB791C3430DD0375BAB0</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7BF59D77BD5502B92E669312</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Embed Pods Frameworks</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-TelegramBotManager/Pods-TelegramBotManager-frameworks.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>9544A8EAC095D27F2F342957</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>B550A3E2C7D0DF73F8DD8393</string>
+				<string>3C34C3D25A0823FAB4010ADE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B550A3E2C7D0DF73F8DD8393</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-TelegramBotManager.debug.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-TelegramBotManager/Pods-TelegramBotManager.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EF767CAAB49771C501471D29</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-TelegramBotManager/Pods-TelegramBotManager-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>1B9FA1DB1CA578FB00C584AF</string>
+</dict>
+</plist>

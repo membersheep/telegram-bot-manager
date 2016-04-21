@@ -1,0 +1,23 @@
+PODS:
+  - Alamofire (3.3.1)
+  - sqlite3 (3.12.2):
+    - sqlite3/common (= 3.12.2)
+  - sqlite3/common (3.12.2)
+  - SwiftyDB (1.1.0):
+    - TinySQLite (~> 0.3.0)
+  - TinySQLite (0.3.1):
+    - sqlite3
+
+DEPENDENCIES:
+  - Alamofire (~> 3.3)
+  - SwiftyDB (~> 1.0)
+
+SPEC CHECKSUMS:
+  Alamofire: 369bc67b6f5ac33ded3648d7bd21c5bfb91c2ecc
+  sqlite3: 5724400abcbfbc8d13c60d6a4123361faf0c62e3
+  SwiftyDB: dd44cb66cf33307951ca6c4a44e6007f5e3b7e33
+  TinySQLite: b27a26c4676a41f045f56e0d94ccc4bce9a1a87f
+
+PODFILE CHECKSUM: 2b0a36ef3f13e1c60da2c86f9eb0269450dd8f06
+
+COCOAPODS: 1.0.0.beta.3

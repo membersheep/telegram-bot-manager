@@ -25,6 +25,11 @@ class BotListViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
     }
+    
+    @IBAction func addButtonPressed(sender: AnyObject) {
+        print("go to add bot")
+    }
+    
 }
 
 extension BotListViewController: UITableViewDelegate {

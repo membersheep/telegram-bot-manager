@@ -23,7 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return true
         }
         let botStorage = BotStorageDefaults()
-        listController.viewModel = BotListViewModel(botStorage: botStorage)
+        let botListViewModel = BotListViewModel(botStorage: botStorage)
+        listController.inject(botListViewModel)
         return true
     }
 

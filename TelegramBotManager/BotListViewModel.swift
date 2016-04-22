@@ -18,7 +18,8 @@ struct BotListViewModel {
         }
     }
     
-    func removeBotNamed(name: String) {
+    func removeBotNamed(name: String) -> BotListViewModel {
         botStorage.removeBotNamed(name)
+        return self
     }
 }

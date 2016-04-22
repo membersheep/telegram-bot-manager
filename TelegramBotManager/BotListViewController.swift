@@ -13,23 +13,47 @@ class BotListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addButton: CircularAddButton!
     
-    var viewModel: BotListViewModel?
+    private var viewModel: BotListViewModel! {
+        didSet {
+            reloadWithAnimation()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        assertDependencies()
+        
+        // TODO: Decide where to put these customizations.
         self.edgesForExtendedLayout = UIRectEdge.None
         addButton.circleColor = UIColor.lightMainColor()
-        
-        assert(viewModel != nil, "View model must be set when displaying this controller")
-        
-        tableView.delegate = self
-        tableView.dataSource = self
     }
     
     @IBAction func addButtonPressed(sender: AnyObject) {
         print("go to add bot")
     }
     
+    func reloadWithAnimation() {
+        guard let unwrappedTableView = tableView else {
+            return
+        }
+        let range = NSMakeRange(0, unwrappedTableView.numberOfSections)
+        let sections = NSIndexSet(indexesInRange: range)
+        unwrappedTableView.reloadSections(sections, withRowAnimation: .Automatic)
+    }
+}
+
+extension BotListViewController: Injectable {
+    func inject(viewModel: BotListViewModel) {
+        self.viewModel = viewModel;
+    }
+    
+    func assertDependencies() {
+        assert(viewModel != nil, "View model must be set when displaying this controller")
+        assert(tableView != nil, "Table view must be set")
+        assert(addButton != nil, "Add button must be set")
+        assert(tableView.delegate != nil, "Table view should have a delegate set")
+        assert(tableView.dataSource != nil, "Table view should have a data source set")
+    }
 }
 
 extension BotListViewController: UITableViewDelegate {
@@ -43,35 +67,19 @@ extension BotListViewController: UITableViewDelegate {
     
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if (editingStyle == .Delete) {
-            guard let listViewModel = self.viewModel else {
-                return
-            }
-            listViewModel.removeBotNamed(listViewModel.botList[indexPath.row].text)
-            reloadWithAnimation()
+            viewModel = viewModel.removeBotNamed(viewModel.botList[indexPath.row].text)
         }
-    }
-    
-    func reloadWithAnimation() {
-        let range = NSMakeRange(0, tableView.numberOfSections)
-        let sections = NSIndexSet(indexesInRange: range)
-        tableView.reloadSections(sections, withRowAnimation: .Automatic)
     }
 }
 
 extension BotListViewController: UITableViewDataSource {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let listViewModel = viewModel else {
-            return 0
-        }
-        return listViewModel.botList.count
+        return viewModel.botList.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        guard let listViewModel = self.viewModel else {
-            return UITableViewCell()
-        }
         let cell = tableView.dequeueReusableCellWithIdentifier(BotListTableViewCell.identifier, forIndexPath: indexPath) as! BotListTableViewCell
-        let cellViewModel = listViewModel.botList[indexPath.row]
+        let cellViewModel = viewModel.botList[indexPath.row]
         cell.configure(withViewModel: cellViewModel)
         return cell
     }

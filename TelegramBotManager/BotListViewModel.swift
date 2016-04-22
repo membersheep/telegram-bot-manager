@@ -12,6 +12,9 @@ struct BotListViewModel {
     
     var botStorage: BotStorage
     
+    // TODO: Keep an array of view models
+    // TODO: If one of the cells changes (modified, created, removed), it'll create a brand new view model with all the other view models and the new one.
+
     var botList: [BotCellViewModel] {
         return botStorage.storedBots.map {
             BotCellViewModel(botModel:$0)

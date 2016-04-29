@@ -67,7 +67,7 @@ extension BotListViewController: UITableViewDelegate {
     
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if (editingStyle == .Delete) {
-            let cellName = botListViewModel.botList[indexPath.row].text
+            let cellName = botListViewModel[indexPath.row].text
             botListViewModel = botListViewModel.removeBotNamed(cellName)
         }
     }
@@ -75,12 +75,12 @@ extension BotListViewController: UITableViewDelegate {
 
 extension BotListViewController: UITableViewDataSource {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return botListViewModel.botList.count
+        return botListViewModel.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(BotListTableViewCell.identifier, forIndexPath: indexPath) as! BotListTableViewCell
-        let cellViewModel = botListViewModel.botList[indexPath.row]
+        let cellViewModel = botListViewModel[indexPath.row]
         cell.configure(withViewModel: cellViewModel)
         return cell
     }

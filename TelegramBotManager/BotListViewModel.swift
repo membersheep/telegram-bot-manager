@@ -9,20 +9,34 @@
 import Foundation
 
 struct BotListViewModel {
-    
-    var botStorage: BotStorage
-    
-    // TODO: Keep an array of view models
-    // TODO: If one of the cells changes (modified, created, removed), it'll create a brand new view model with all the other view models and the new one.
+    private var botStorage: BotStorage
+    private var botCellViewModelList: [BotCellViewModel]
 
-    var botList: [BotCellViewModel] {
-        return botStorage.storedBots.map {
+    init(botStorage: BotStorage) {
+        self.botStorage = botStorage
+        self.botCellViewModelList = botStorage.storedBots.map {
             BotCellViewModel(botModel:$0)
         }
     }
     
     func removeBotNamed(name: String) -> BotListViewModel {
         botStorage.removeBotNamed(name)
-        return self
+        return BotListViewModel(botStorage: botStorage)
+    }    
+}
+
+extension BotListViewModel: CollectionType {
+    typealias Index = Int
+    
+    var startIndex: Int {
+        return 0
+    }
+    
+    var endIndex: Int {
+        return botCellViewModelList.count
+    }
+    
+    subscript(i: Int) -> BotCellViewModel {
+        return botCellViewModelList[i]
     }
 }

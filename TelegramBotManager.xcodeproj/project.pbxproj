@@ -9,9 +9,13 @@
 /* Begin PBXBuildFile section */
 		0BB333C6366FD3C4FCA35947 /* Pods_TelegramBotManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45F4DB791C3430DD0375BAB0 /* Pods_TelegramBotManager.framework */; };
 		1B26A47B1CC9137200BA0A9A /* Injectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B26A47A1CC9137200BA0A9A /* Injectable.swift */; };
+		1B631F1A1CD75C4300A8AA85 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B631F191CD75C4300A8AA85 /* AppCoordinator.swift */; };
+		1B631F1C1CD77E7700A8AA85 /* ListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B631F1B1CD77E7700A8AA85 /* ListCoordinator.swift */; };
+		1B631F1E1CD7936A00A8AA85 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B631F1D1CD7936A00A8AA85 /* Coordinator.swift */; };
+		1B631F241CD79C4C00A8AA85 /* BotListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B631F221CD79C4C00A8AA85 /* BotListViewController.xib */; };
+		1B631F281CD7AB2900A8AA85 /* BotListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B631F261CD7AB2900A8AA85 /* BotListTableViewCell.xib */; };
 		1B9FA1E71CA578FB00C584AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9FA1E61CA578FB00C584AF /* AppDelegate.swift */; };
 		1B9FA1E91CA578FB00C584AF /* BotListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9FA1E81CA578FB00C584AF /* BotListViewController.swift */; };
-		1B9FA1EC1CA578FB00C584AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B9FA1EA1CA578FB00C584AF /* Main.storyboard */; };
 		1B9FA1EE1CA578FB00C584AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B9FA1ED1CA578FB00C584AF /* Assets.xcassets */; };
 		1B9FA1F11CA578FB00C584AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B9FA1EF1CA578FB00C584AF /* LaunchScreen.storyboard */; };
 		1B9FA1FC1CA578FB00C584AF /* BotStorageDefaultsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9FA1FB1CA578FB00C584AF /* BotStorageDefaultsTests.swift */; };
@@ -42,10 +46,14 @@
 
 /* Begin PBXFileReference section */
 		1B26A47A1CC9137200BA0A9A /* Injectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Injectable.swift; sourceTree = "<group>"; };
+		1B631F191CD75C4300A8AA85 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		1B631F1B1CD77E7700A8AA85 /* ListCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCoordinator.swift; sourceTree = "<group>"; };
+		1B631F1D1CD7936A00A8AA85 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		1B631F221CD79C4C00A8AA85 /* BotListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BotListViewController.xib; sourceTree = "<group>"; };
+		1B631F261CD7AB2900A8AA85 /* BotListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BotListTableViewCell.xib; sourceTree = "<group>"; };
 		1B9FA1E31CA578FB00C584AF /* TelegramBotManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TelegramBotManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B9FA1E61CA578FB00C584AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B9FA1E81CA578FB00C584AF /* BotListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotListViewController.swift; sourceTree = "<group>"; };
-		1B9FA1EB1CA578FB00C584AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1B9FA1ED1CA578FB00C584AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B9FA1F01CA578FB00C584AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B9FA1F21CA578FB00C584AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -89,6 +97,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B631F181CD75C1D00A8AA85 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				1B631F191CD75C4300A8AA85 /* AppCoordinator.swift */,
+				1B631F1B1CD77E7700A8AA85 /* ListCoordinator.swift */,
+			);
+			name = Coordinators;
+			sourceTree = "<group>";
+		};
 		1B9FA1DA1CA578FB00C584AF = {
 			isa = PBXGroup;
 			children = (
@@ -113,8 +130,8 @@
 			isa = PBXGroup;
 			children = (
 				1B9FA1E61CA578FB00C584AF /* AppDelegate.swift */,
-				1B9FA1EA1CA578FB00C584AF /* Main.storyboard */,
 				1B9FA1EF1CA578FB00C584AF /* LaunchScreen.storyboard */,
+				1B631F181CD75C1D00A8AA85 /* Coordinators */,
 				1B9FA20B1CA57F2800C584AF /* Views */,
 				1B9FA20A1CA57F1D00C584AF /* ViewControllers */,
 				1B9FA2091CA57F1300C584AF /* ViewModels */,
@@ -171,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				1B9FA1E81CA578FB00C584AF /* BotListViewController.swift */,
+				1B631F221CD79C4C00A8AA85 /* BotListViewController.xib */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -179,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				1BCF99D41CAADC99000AAACE /* BotListTableViewCell.swift */,
+				1B631F261CD7AB2900A8AA85 /* BotListTableViewCell.xib */,
 				1BCF99ED1CAC0CB9000AAACE /* CircularAddButton.swift */,
 			);
 			name = Views;
@@ -189,6 +208,7 @@
 			children = (
 				1B9FA21A1CA5899E00C584AF /* TextPresentable.swift */,
 				1B26A47A1CC9137200BA0A9A /* Injectable.swift */,
+				1B631F1D1CD7936A00A8AA85 /* Coordinator.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -303,8 +323,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B9FA1F11CA578FB00C584AF /* LaunchScreen.storyboard in Resources */,
+				1B631F281CD7AB2900A8AA85 /* BotListTableViewCell.xib in Resources */,
 				1B9FA1EE1CA578FB00C584AF /* Assets.xcassets in Resources */,
-				1B9FA1EC1CA578FB00C584AF /* Main.storyboard in Resources */,
+				1B631F241CD79C4C00A8AA85 /* BotListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +393,8 @@
 			files = (
 				1B9FA21B1CA5899E00C584AF /* TextPresentable.swift in Sources */,
 				1B9FA1E91CA578FB00C584AF /* BotListViewController.swift in Sources */,
+				1B631F1E1CD7936A00A8AA85 /* Coordinator.swift in Sources */,
+				1B631F1A1CD75C4300A8AA85 /* AppCoordinator.swift in Sources */,
 				1B9FA2161CA57FF400C584AF /* BotStorage.swift in Sources */,
 				1BCF99EE1CAC0CB9000AAACE /* CircularAddButton.swift in Sources */,
 				1B26A47B1CC9137200BA0A9A /* Injectable.swift in Sources */,
@@ -379,6 +402,7 @@
 				1B9FA21E1CA5971A00C584AF /* BotStorageDefaults.swift in Sources */,
 				1B9FA2101CA57F9200C584AF /* BotCellViewModel.swift in Sources */,
 				1B9FA1E71CA578FB00C584AF /* AppDelegate.swift in Sources */,
+				1B631F1C1CD77E7700A8AA85 /* ListCoordinator.swift in Sources */,
 				1BCF99EC1CABF5ED000AAACE /* ThemeManager.swift in Sources */,
 				1BCF99CF1CAABE36000AAACE /* BotListViewModel.swift in Sources */,
 				1B9FA2131CA57FDD00C584AF /* Bot.swift in Sources */,
@@ -408,14 +432,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		1B9FA1EA1CA578FB00C584AF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1B9FA1EB1CA578FB00C584AF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1B9FA1EF1CA578FB00C584AF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

@@ -8,10 +8,16 @@
 
 import UIKit
 
+protocol BotListViewControllerDelegate {
+    func addAction()
+    func detailAction()
+}
+
 class BotListViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addButton: CircularAddButton!
+    var delegate: BotListViewControllerDelegate?
     
     private var botListViewModel: BotListViewModel! {
         didSet {
@@ -29,7 +35,7 @@ class BotListViewController: UIViewController {
     }
     
     @IBAction func addButtonPressed(sender: AnyObject) {
-        print("go to add bot")
+        delegate?.addAction()
     }
     
     func reloadWithAnimation() {
@@ -58,7 +64,8 @@ extension BotListViewController: Injectable {
 
 extension BotListViewController: UITableViewDelegate {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        // TODO: Go to Detail controller
+        // TODO: Parametrize to pass data. What must be passed? Ad Hoc model or ViewModel?
+        delegate?.detailAction()
     }
     
     func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

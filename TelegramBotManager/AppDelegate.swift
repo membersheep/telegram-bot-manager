@@ -13,18 +13,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    private lazy var appCoordinator: Coordinator = {
+        return AppCoordinator(window: self.window!)
+    }()
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        window = UIWindow(frame: UIScreen.mainScreen().bounds)
         ThemeManager.applyTheme()
-        
-        guard let navigationController = window?.rootViewController as? UINavigationController else {
-            return true
-        }
-        guard let listController = navigationController.topViewController as? BotListViewController else {
-            return true
-        }
-        let botStorage = BotStorageDefaults()
-        let botListViewModel = BotListViewModel(botStorage: botStorage)
-        listController.inject(botListViewModel)
+        appCoordinator.start()
         return true
     }
 

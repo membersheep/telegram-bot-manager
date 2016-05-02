@@ -22,7 +22,7 @@ class CircularAddButton: UIButton {
         }
     }
     
-    var plusScale: CGFloat = 0.5
+    var plusScale: CGFloat = 0.2
     
     override func layoutSubviews() {
         super.layoutSubviews()

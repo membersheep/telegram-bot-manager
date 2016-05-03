@@ -8,16 +8,16 @@
 
 import UIKit
 
-protocol BotListViewControllerDelegate {
-    func addAction()
-    func detailAction()
+protocol BotListViewControllerDelegate: class {
+    func addActionPerformed()
+    func detailActionPerformed()
 }
 
 class BotListViewController: UIViewController {
-    
+    static let identifier = "BotListViewController"
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addButton: CircularAddButton!
-    var delegate: BotListViewControllerDelegate?
+    weak var delegate: BotListViewControllerDelegate?
     
     private var botListViewModel: BotListViewModel! {
         didSet {
@@ -27,15 +27,15 @@ class BotListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.registerNib(UINib(nibName: BotTableViewCell.identifier, bundle:nil), forCellReuseIdentifier: BotTableViewCell.identifier)
         assertDependencies()
-        
         // TODO: Decide where to put these customizations.
         self.edgesForExtendedLayout = UIRectEdge.None
         addButton.circleColor = UIColor.lightMainColor()
     }
     
     @IBAction func addButtonPressed(sender: AnyObject) {
-        delegate?.addAction()
+        delegate?.addActionPerformed()
     }
     
     func reloadWithAnimation() {
@@ -65,7 +65,7 @@ extension BotListViewController: Injectable {
 extension BotListViewController: UITableViewDelegate {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         // TODO: Parametrize to pass data. What must be passed? Ad Hoc model or ViewModel?
-        delegate?.detailAction()
+        delegate?.detailActionPerformed()
     }
     
     func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
@@ -86,7 +86,7 @@ extension BotListViewController: UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(BotListTableViewCell.identifier, forIndexPath: indexPath) as! BotListTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(BotTableViewCell.identifier, forIndexPath: indexPath) as! BotTableViewCell
         let cellViewModel = botListViewModel[indexPath.row]
         cell.configure(withViewModel: cellViewModel)
         return cell

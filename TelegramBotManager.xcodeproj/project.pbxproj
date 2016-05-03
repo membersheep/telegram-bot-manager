@@ -13,7 +13,6 @@
 		1B631F1C1CD77E7700A8AA85 /* ListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B631F1B1CD77E7700A8AA85 /* ListCoordinator.swift */; };
 		1B631F1E1CD7936A00A8AA85 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B631F1D1CD7936A00A8AA85 /* Coordinator.swift */; };
 		1B631F241CD79C4C00A8AA85 /* BotListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B631F221CD79C4C00A8AA85 /* BotListViewController.xib */; };
-		1B631F281CD7AB2900A8AA85 /* BotListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B631F261CD7AB2900A8AA85 /* BotListTableViewCell.xib */; };
 		1B9FA1E71CA578FB00C584AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9FA1E61CA578FB00C584AF /* AppDelegate.swift */; };
 		1B9FA1E91CA578FB00C584AF /* BotListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9FA1E81CA578FB00C584AF /* BotListViewController.swift */; };
 		1B9FA1EE1CA578FB00C584AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B9FA1ED1CA578FB00C584AF /* Assets.xcassets */; };
@@ -27,11 +26,18 @@
 		1BCF99CF1CAABE36000AAACE /* BotListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCF99CE1CAABE36000AAACE /* BotListViewModel.swift */; };
 		1BCF99D11CAAC164000AAACE /* BotCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCF99D01CAAC164000AAACE /* BotCellViewModelTests.swift */; };
 		1BCF99D31CAAC347000AAACE /* BotListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCF99D21CAAC347000AAACE /* BotListViewModelTests.swift */; };
-		1BCF99D51CAADC99000AAACE /* BotListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCF99D41CAADC99000AAACE /* BotListTableViewCell.swift */; };
 		1BCF99D91CABD013000AAACE /* BotListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCF99D81CABD013000AAACE /* BotListViewControllerTests.swift */; };
 		1BCF99E81CABD25D000AAACE /* BotStorageMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCF99E71CABD25D000AAACE /* BotStorageMock.swift */; };
 		1BCF99EC1CABF5ED000AAACE /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCF99EB1CABF5ED000AAACE /* ThemeManager.swift */; };
 		1BCF99EE1CAC0CB9000AAACE /* CircularAddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCF99ED1CAC0CB9000AAACE /* CircularAddButton.swift */; };
+		1BEFB32C1CD8AA180080BA27 /* AddBotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEFB32A1CD8AA180080BA27 /* AddBotViewController.swift */; };
+		1BEFB32D1CD8AA180080BA27 /* AddBotViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BEFB32B1CD8AA180080BA27 /* AddBotViewController.xib */; };
+		1BEFB3301CD8B0720080BA27 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEFB32E1CD8B0720080BA27 /* SearchTableViewCell.swift */; };
+		1BEFB3311CD8B0720080BA27 /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BEFB32F1CD8B0720080BA27 /* SearchTableViewCell.xib */; };
+		1BEFB3341CD8DCDA0080BA27 /* BotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEFB3321CD8DCDA0080BA27 /* BotTableViewCell.swift */; };
+		1BEFB3351CD8DCDA0080BA27 /* BotTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BEFB3331CD8DCDA0080BA27 /* BotTableViewCell.xib */; };
+		1BEFB3391CD8FDBE0080BA27 /* ImagePresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEFB3381CD8FDBE0080BA27 /* ImagePresentable.swift */; };
+		1BEFB33B1CD901A40080BA27 /* BotSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEFB33A1CD901A40080BA27 /* BotSearchViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +56,6 @@
 		1B631F1B1CD77E7700A8AA85 /* ListCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCoordinator.swift; sourceTree = "<group>"; };
 		1B631F1D1CD7936A00A8AA85 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		1B631F221CD79C4C00A8AA85 /* BotListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BotListViewController.xib; sourceTree = "<group>"; };
-		1B631F261CD7AB2900A8AA85 /* BotListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BotListTableViewCell.xib; sourceTree = "<group>"; };
 		1B9FA1E31CA578FB00C584AF /* TelegramBotManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TelegramBotManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B9FA1E61CA578FB00C584AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B9FA1E81CA578FB00C584AF /* BotListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotListViewController.swift; sourceTree = "<group>"; };
@@ -68,11 +73,18 @@
 		1BCF99CE1CAABE36000AAACE /* BotListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BotListViewModel.swift; sourceTree = "<group>"; };
 		1BCF99D01CAAC164000AAACE /* BotCellViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BotCellViewModelTests.swift; sourceTree = "<group>"; };
 		1BCF99D21CAAC347000AAACE /* BotListViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BotListViewModelTests.swift; sourceTree = "<group>"; };
-		1BCF99D41CAADC99000AAACE /* BotListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BotListTableViewCell.swift; sourceTree = "<group>"; };
 		1BCF99D81CABD013000AAACE /* BotListViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BotListViewControllerTests.swift; sourceTree = "<group>"; };
 		1BCF99E71CABD25D000AAACE /* BotStorageMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BotStorageMock.swift; sourceTree = "<group>"; };
 		1BCF99EB1CABF5ED000AAACE /* ThemeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		1BCF99ED1CAC0CB9000AAACE /* CircularAddButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularAddButton.swift; sourceTree = "<group>"; };
+		1BEFB32A1CD8AA180080BA27 /* AddBotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBotViewController.swift; sourceTree = "<group>"; };
+		1BEFB32B1CD8AA180080BA27 /* AddBotViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddBotViewController.xib; sourceTree = "<group>"; };
+		1BEFB32E1CD8B0720080BA27 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		1BEFB32F1CD8B0720080BA27 /* SearchTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
+		1BEFB3321CD8DCDA0080BA27 /* BotTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BotTableViewCell.swift; sourceTree = "<group>"; };
+		1BEFB3331CD8DCDA0080BA27 /* BotTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BotTableViewCell.xib; sourceTree = "<group>"; };
+		1BEFB3381CD8FDBE0080BA27 /* ImagePresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePresentable.swift; sourceTree = "<group>"; };
+		1BEFB33A1CD901A40080BA27 /* BotSearchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BotSearchViewModel.swift; sourceTree = "<group>"; };
 		3C34C3D25A0823FAB4010ADE /* Pods-TelegramBotManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TelegramBotManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-TelegramBotManager/Pods-TelegramBotManager.release.xcconfig"; sourceTree = "<group>"; };
 		45F4DB791C3430DD0375BAB0 /* Pods_TelegramBotManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TelegramBotManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B550A3E2C7D0DF73F8DD8393 /* Pods-TelegramBotManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TelegramBotManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TelegramBotManager/Pods-TelegramBotManager.debug.xcconfig"; sourceTree = "<group>"; };
@@ -180,6 +192,7 @@
 			children = (
 				1BCF99CE1CAABE36000AAACE /* BotListViewModel.swift */,
 				1B9FA20F1CA57F9200C584AF /* BotCellViewModel.swift */,
+				1BEFB33A1CD901A40080BA27 /* BotSearchViewModel.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -189,6 +202,8 @@
 			children = (
 				1B9FA1E81CA578FB00C584AF /* BotListViewController.swift */,
 				1B631F221CD79C4C00A8AA85 /* BotListViewController.xib */,
+				1BEFB32A1CD8AA180080BA27 /* AddBotViewController.swift */,
+				1BEFB32B1CD8AA180080BA27 /* AddBotViewController.xib */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -196,8 +211,10 @@
 		1B9FA20B1CA57F2800C584AF /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1BCF99D41CAADC99000AAACE /* BotListTableViewCell.swift */,
-				1B631F261CD7AB2900A8AA85 /* BotListTableViewCell.xib */,
+				1BEFB3321CD8DCDA0080BA27 /* BotTableViewCell.swift */,
+				1BEFB3331CD8DCDA0080BA27 /* BotTableViewCell.xib */,
+				1BEFB32E1CD8B0720080BA27 /* SearchTableViewCell.swift */,
+				1BEFB32F1CD8B0720080BA27 /* SearchTableViewCell.xib */,
 				1BCF99ED1CAC0CB9000AAACE /* CircularAddButton.swift */,
 			);
 			name = Views;
@@ -207,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				1B9FA21A1CA5899E00C584AF /* TextPresentable.swift */,
+				1BEFB3381CD8FDBE0080BA27 /* ImagePresentable.swift */,
 				1B26A47A1CC9137200BA0A9A /* Injectable.swift */,
 				1B631F1D1CD7936A00A8AA85 /* Coordinator.swift */,
 			);
@@ -322,10 +340,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BEFB32D1CD8AA180080BA27 /* AddBotViewController.xib in Resources */,
+				1BEFB3311CD8B0720080BA27 /* SearchTableViewCell.xib in Resources */,
 				1B9FA1F11CA578FB00C584AF /* LaunchScreen.storyboard in Resources */,
-				1B631F281CD7AB2900A8AA85 /* BotListTableViewCell.xib in Resources */,
 				1B9FA1EE1CA578FB00C584AF /* Assets.xcassets in Resources */,
 				1B631F241CD79C4C00A8AA85 /* BotListViewController.xib in Resources */,
+				1BEFB3351CD8DCDA0080BA27 /* BotTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,19 +411,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BEFB3341CD8DCDA0080BA27 /* BotTableViewCell.swift in Sources */,
+				1BEFB3301CD8B0720080BA27 /* SearchTableViewCell.swift in Sources */,
 				1B9FA21B1CA5899E00C584AF /* TextPresentable.swift in Sources */,
 				1B9FA1E91CA578FB00C584AF /* BotListViewController.swift in Sources */,
+				1BEFB32C1CD8AA180080BA27 /* AddBotViewController.swift in Sources */,
 				1B631F1E1CD7936A00A8AA85 /* Coordinator.swift in Sources */,
 				1B631F1A1CD75C4300A8AA85 /* AppCoordinator.swift in Sources */,
 				1B9FA2161CA57FF400C584AF /* BotStorage.swift in Sources */,
+				1BEFB33B1CD901A40080BA27 /* BotSearchViewModel.swift in Sources */,
 				1BCF99EE1CAC0CB9000AAACE /* CircularAddButton.swift in Sources */,
 				1B26A47B1CC9137200BA0A9A /* Injectable.swift in Sources */,
-				1BCF99D51CAADC99000AAACE /* BotListTableViewCell.swift in Sources */,
 				1B9FA21E1CA5971A00C584AF /* BotStorageDefaults.swift in Sources */,
 				1B9FA2101CA57F9200C584AF /* BotCellViewModel.swift in Sources */,
 				1B9FA1E71CA578FB00C584AF /* AppDelegate.swift in Sources */,
 				1B631F1C1CD77E7700A8AA85 /* ListCoordinator.swift in Sources */,
 				1BCF99EC1CABF5ED000AAACE /* ThemeManager.swift in Sources */,
+				1BEFB3391CD8FDBE0080BA27 /* ImagePresentable.swift in Sources */,
 				1BCF99CF1CAABE36000AAACE /* BotListViewModel.swift in Sources */,
 				1B9FA2131CA57FDD00C584AF /* Bot.swift in Sources */,
 			);

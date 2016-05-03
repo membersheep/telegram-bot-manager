@@ -25,3 +25,10 @@ extension BotCellViewModel: TextPresentable {
         return .systemFontOfSize(17.0)
     }
 }
+
+extension BotCellViewModel: ImagePresentable {
+    var imageURL: NSURL {
+        // TODO: Implement correctly
+        return NSURL()
+    }
+}

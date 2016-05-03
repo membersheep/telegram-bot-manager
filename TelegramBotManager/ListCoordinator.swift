@@ -15,6 +15,7 @@ protocol ListCoordinatorDelegate {
 
 class ListCoordinator: NSObject {
     let navigationController: UINavigationController
+    var childCoordinators: [Coordinator] = []
     var delegate: ListCoordinatorDelegate?
     
     init(navigationController: UINavigationController) {
@@ -27,18 +28,36 @@ extension ListCoordinator: Coordinator {
     func start() {
         let botStorage = BotStorageDefaults()
         let botListViewModel = BotListViewModel(botStorage: botStorage)
-        let listController = BotListViewController(nibName: "BotListViewController", bundle: nil)
+        let listController = BotListViewController(nibName: BotListViewController.identifier, bundle: nil)
         listController.inject(botListViewModel)
+        listController.delegate = self
         self.navigationController.pushViewController(listController, animated: false)
+    }
+    
+    func showAdd() {
+        // TODO: Create view model
+        let addController = AddBotViewController(nibName: AddBotViewController.identifier, bundle: nil)
+        // TODO: Inject view model
+        navigationController.topViewController?.presentViewController(addController, animated: true, completion: nil)
+    }
+    
+    func dismissAdd() {
+        
     }
 }
 
 extension ListCoordinator: BotListViewControllerDelegate {
-    func addAction() {
-        
+    func addActionPerformed() {
+        showAdd()
     }
     
-    func detailAction() {
-        
+    func detailActionPerformed() {
+        // TODO: create detail coordinator and add it to child coordinators
+    }
+}
+
+extension ListCoordinator: AddBotViewControllerDelegate {
+    func dismissiActionPerformed() {
+        dismissAdd()
     }
 }

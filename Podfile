@@ -5,5 +5,5 @@ use_frameworks!
 
 target 'TelegramBotManager' do
   pod 'SwiftyDB', '~> 1.0'
-  pod 'Alamofire', '~> 3.3'
+  pod 'Moya'
 end

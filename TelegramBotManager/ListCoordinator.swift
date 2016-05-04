@@ -35,9 +35,9 @@ extension ListCoordinator: Coordinator {
     }
     
     func showAdd() {
-        // TODO: Create view model
+        let viewModel = BotSearchViewModel(botCellViewModel: nil)
         let addController = AddBotViewController(nibName: AddBotViewController.identifier, bundle: nil)
-        // TODO: Inject view model
+        addController.inject(viewModel)
         navigationController.topViewController?.presentViewController(addController, animated: true, completion: nil)
     }
     

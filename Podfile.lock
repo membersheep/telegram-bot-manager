@@ -11,12 +11,23 @@ PODS:
   - sqlite3/common (3.12.2)
   - SwiftyDB (1.1.0):
     - TinySQLite (~> 0.3.0)
+  - SwiftyJSON (2.3.2)
   - TinySQLite (0.3.1):
     - sqlite3
 
 DEPENDENCIES:
   - Moya
   - SwiftyDB (~> 1.0)
+  - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
+
+EXTERNAL SOURCES:
+  SwiftyJSON:
+    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
+
+CHECKOUT OPTIONS:
+  SwiftyJSON:
+    :commit: 2a5b70f06001316d4fb54501edc70b4084705da0
+    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
 
 SPEC CHECKSUMS:
   Alamofire: 369bc67b6f5ac33ded3648d7bd21c5bfb91c2ecc
@@ -24,8 +35,9 @@ SPEC CHECKSUMS:
   Result: 9e75e1111c774c6ac594e14907b15057053a7959
   sqlite3: 5724400abcbfbc8d13c60d6a4123361faf0c62e3
   SwiftyDB: dd44cb66cf33307951ca6c4a44e6007f5e3b7e33
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
   TinySQLite: b27a26c4676a41f045f56e0d94ccc4bce9a1a87f
 
-PODFILE CHECKSUM: dd0de76439393716f947135af78b0f673b3e3a16
+PODFILE CHECKSUM: 59007491622a42b7be342b987eaf2a33f41a8054
 
 COCOAPODS: 1.0.0.beta.3

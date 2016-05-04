@@ -9,44 +9,20 @@
 import Foundation
 import Moya
 
-enum BotNetworkService {
-    case GetMe(token: String)
-}
-
-extension BotNetworkService: TargetType {
-    var baseURL: NSURL { return NSURL(string: "https://api.telegram.org/bot")! }
-    var path: String {
-        switch self {
-        case .GetMe(let token):
-            return "/bot\(token)/getMe"
+struct BotNetworkService {
+    static let provider = MoyaProvider<TelegramBotAPITarget>()
+    
+    static func request(target: TelegramBotAPITarget, successCallback: (AnyObject) -> Void, errorCallback: (statusCode: Int) -> Void, failureCallback: (Moya.Error) -> Void) {
+        provider.request(target) {
+            result in
+            switch result {
+            case let .Success(response):
+                // TODO: Decode the json with the decoder and return the decoded object to the success callback
+                successCallback(response.data)
+                break
+            case let .Failure(error):
+                failureCallback(error)
+            }
         }
-    }
-    var method: Moya.Method {
-        switch self {
-        case .GetMe(_):
-            return .GET
-        }
-    }
-    var parameters: [String: AnyObject]? {
-        switch self {
-        case .GetMe(_):
-            return nil
-        }
-    }
-    var sampleData: NSData {
-        switch self {
-        case .GetMe(_):
-            return "{\"ok\": true,\"result\": {\"id\": 208788398,\"first_name\": \"lollerlandia-mumble\",\"username\": \"LollerMumbleBot\"}}".UTF8EncodedData
-        }
-    }
-}
-
-// MARK: - Helpers
-private extension String {
-    var URLEscapedString: String {
-        return self.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLHostAllowedCharacterSet())!
-    }
-    var UTF8EncodedData: NSData {
-        return self.dataUsingEncoding(NSUTF8StringEncoding)!
     }
 }

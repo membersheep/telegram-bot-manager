@@ -6,4 +6,5 @@ use_frameworks!
 target 'TelegramBotManager' do
   pod 'SwiftyDB', '~> 1.0'
   pod 'Moya'
+  pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
 end

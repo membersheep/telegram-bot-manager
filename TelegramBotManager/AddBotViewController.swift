@@ -38,6 +38,19 @@ class AddBotViewController: UIViewController {
     }
 }
 
+extension AddBotViewController: Injectable {
+    func inject(botSearchViewModel: BotSearchViewModel) {
+        self.botSearchViewModel = botSearchViewModel;
+    }
+    
+    func assertDependencies() {
+        assert(botSearchViewModel != nil, "View model must be set when displaying this controller")
+        assert(tableView != nil, "Table view must be set")
+        assert(tableView.delegate != nil, "Table view should have a delegate set")
+        assert(tableView.dataSource != nil, "Table view should have a data source set")
+    }
+}
+
 extension AddBotViewController: UITableViewDataSource {
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 2
@@ -83,6 +96,7 @@ extension AddBotViewController: UITableViewDelegate {
 
 extension AddBotViewController: SearchTableViewCellDelegate {
     func searchText(text: String) {
-        botSearchViewModel.searchBotWithToken(text)
+        // TODO: Handle asyncronicity with a promise or an observable or a result object or whatever
+        botSearchViewModel = botSearchViewModel.searchBotWithToken(text)
     }
 }

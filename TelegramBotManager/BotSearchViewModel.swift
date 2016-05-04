@@ -13,7 +13,7 @@ struct BotSearchViewModel {
     
     func searchBotWithToken(token: String) -> BotSearchViewModel{
         // TODO: Search with APIs
-        // Take the returned value and wrap it in the proper structs
+        // Take the returned value and wrap it in the proper struct
         return BotSearchViewModel(botCellViewModel: BotCellViewModel(botModel: Bot(name: "test", token: "test")))
     }
 }

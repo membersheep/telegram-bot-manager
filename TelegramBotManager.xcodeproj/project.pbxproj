@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		0BB333C6366FD3C4FCA35947 /* Pods_TelegramBotManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45F4DB791C3430DD0375BAB0 /* Pods_TelegramBotManager.framework */; };
+		1B00D0111CD9F6480007B8EE /* BotNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B00D0101CD9F6480007B8EE /* BotNetworkService.swift */; };
+		1B00D0131CDA052A0007B8EE /* TelegramBotAPITarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B00D0121CDA052A0007B8EE /* TelegramBotAPITarget.swift */; };
+		1B00D0151CDA4D710007B8EE /* TelegramAPIBotDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B00D0141CDA4D710007B8EE /* TelegramAPIBotDecoder.swift */; };
+		1B00D0171CDA4E250007B8EE /* Mappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B00D0161CDA4E250007B8EE /* Mappable.swift */; };
+		1B00D0191CDA53740007B8EE /* Response+JSONMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B00D0181CDA53740007B8EE /* Response+JSONMapper.swift */; };
 		1B26A47B1CC9137200BA0A9A /* Injectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B26A47A1CC9137200BA0A9A /* Injectable.swift */; };
 		1B631F1A1CD75C4300A8AA85 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B631F191CD75C4300A8AA85 /* AppCoordinator.swift */; };
 		1B631F1C1CD77E7700A8AA85 /* ListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B631F1B1CD77E7700A8AA85 /* ListCoordinator.swift */; };
@@ -51,6 +56,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B00D0101CD9F6480007B8EE /* BotNetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BotNetworkService.swift; sourceTree = "<group>"; };
+		1B00D0121CDA052A0007B8EE /* TelegramBotAPITarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TelegramBotAPITarget.swift; sourceTree = "<group>"; };
+		1B00D0141CDA4D710007B8EE /* TelegramAPIBotDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TelegramAPIBotDecoder.swift; sourceTree = "<group>"; };
+		1B00D0161CDA4E250007B8EE /* Mappable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mappable.swift; sourceTree = "<group>"; };
+		1B00D0181CDA53740007B8EE /* Response+JSONMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Response+JSONMapper.swift"; sourceTree = "<group>"; };
 		1B26A47A1CC9137200BA0A9A /* Injectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Injectable.swift; sourceTree = "<group>"; };
 		1B631F191CD75C4300A8AA85 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		1B631F1B1CD77E7700A8AA85 /* ListCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCoordinator.swift; sourceTree = "<group>"; };
@@ -112,6 +122,7 @@
 		1B631F181CD75C1D00A8AA85 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
+				1B631F1D1CD7936A00A8AA85 /* Coordinator.swift */,
 				1B631F191CD75C4300A8AA85 /* AppCoordinator.swift */,
 				1B631F1B1CD77E7700A8AA85 /* ListCoordinator.swift */,
 			);
@@ -180,9 +191,13 @@
 		1B9FA2081CA5798A00C584AF /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				1BCF99EB1CABF5ED000AAACE /* ThemeManager.swift */,
 				1B9FA2151CA57FF400C584AF /* BotStorage.swift */,
 				1B9FA21D1CA5971A00C584AF /* BotStorageDefaults.swift */,
-				1BCF99EB1CABF5ED000AAACE /* ThemeManager.swift */,
+				1B00D0101CD9F6480007B8EE /* BotNetworkService.swift */,
+				1B00D0121CDA052A0007B8EE /* TelegramBotAPITarget.swift */,
+				1B00D0141CDA4D710007B8EE /* TelegramAPIBotDecoder.swift */,
+				1B00D0181CDA53740007B8EE /* Response+JSONMapper.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -226,7 +241,7 @@
 				1B9FA21A1CA5899E00C584AF /* TextPresentable.swift */,
 				1BEFB3381CD8FDBE0080BA27 /* ImagePresentable.swift */,
 				1B26A47A1CC9137200BA0A9A /* Injectable.swift */,
-				1B631F1D1CD7936A00A8AA85 /* Coordinator.swift */,
+				1B00D0161CDA4E250007B8EE /* Mappable.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -421,10 +436,15 @@
 				1B9FA2161CA57FF400C584AF /* BotStorage.swift in Sources */,
 				1BEFB33B1CD901A40080BA27 /* BotSearchViewModel.swift in Sources */,
 				1BCF99EE1CAC0CB9000AAACE /* CircularAddButton.swift in Sources */,
+				1B00D0191CDA53740007B8EE /* Response+JSONMapper.swift in Sources */,
 				1B26A47B1CC9137200BA0A9A /* Injectable.swift in Sources */,
+				1B00D0131CDA052A0007B8EE /* TelegramBotAPITarget.swift in Sources */,
 				1B9FA21E1CA5971A00C584AF /* BotStorageDefaults.swift in Sources */,
 				1B9FA2101CA57F9200C584AF /* BotCellViewModel.swift in Sources */,
+				1B00D0151CDA4D710007B8EE /* TelegramAPIBotDecoder.swift in Sources */,
 				1B9FA1E71CA578FB00C584AF /* AppDelegate.swift in Sources */,
+				1B00D0171CDA4E250007B8EE /* Mappable.swift in Sources */,
+				1B00D0111CD9F6480007B8EE /* BotNetworkService.swift in Sources */,
 				1B631F1C1CD77E7700A8AA85 /* ListCoordinator.swift in Sources */,
 				1BCF99EC1CABF5ED000AAACE /* ThemeManager.swift in Sources */,
 				1BEFB3391CD8FDBE0080BA27 /* ImagePresentable.swift in Sources */,

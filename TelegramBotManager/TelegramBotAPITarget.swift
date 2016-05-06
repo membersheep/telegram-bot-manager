@@ -15,7 +15,7 @@ enum TelegramBotAPITarget {
 
 extension TelegramBotAPITarget: TargetType {
     var baseURL: NSURL {
-        return NSURL(string: "https://api.telegram.org/bot")!
+        return NSURL(string: "https://api.telegram.org")!
     }
     var path: String {
         switch self {

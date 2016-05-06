@@ -1,5 +1,5 @@
 //
-//  Decodable.swift
+//  Mappable.swift
 //  TelegramBotManager
 //
 //  Created by Alessandro Maroso on 04/05/16.

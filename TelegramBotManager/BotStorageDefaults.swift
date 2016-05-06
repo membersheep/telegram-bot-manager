@@ -15,7 +15,7 @@ struct BotStorageDefaults: BotStorage {
     var storedBots: [Bot] {
         let dictionary = defaults.dictionaryForKey(BOT_DICTIONARY_KEY) as? [String: String] ?? [:]
         return dictionary.map{ key, value in
-            Bot(name: key, token: value)
+            Bot(name: key, username: key, token: value)
         }
     }
     

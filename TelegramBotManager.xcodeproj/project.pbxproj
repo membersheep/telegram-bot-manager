@@ -10,7 +10,6 @@
 		0BB333C6366FD3C4FCA35947 /* Pods_TelegramBotManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45F4DB791C3430DD0375BAB0 /* Pods_TelegramBotManager.framework */; };
 		1B00D0111CD9F6480007B8EE /* BotNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B00D0101CD9F6480007B8EE /* BotNetworkService.swift */; };
 		1B00D0131CDA052A0007B8EE /* TelegramBotAPITarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B00D0121CDA052A0007B8EE /* TelegramBotAPITarget.swift */; };
-		1B00D0151CDA4D710007B8EE /* TelegramAPIBotDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B00D0141CDA4D710007B8EE /* TelegramAPIBotDecoder.swift */; };
 		1B00D0171CDA4E250007B8EE /* Mappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B00D0161CDA4E250007B8EE /* Mappable.swift */; };
 		1B00D0191CDA53740007B8EE /* Response+JSONMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B00D0181CDA53740007B8EE /* Response+JSONMapper.swift */; };
 		1B26A47B1CC9137200BA0A9A /* Injectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B26A47A1CC9137200BA0A9A /* Injectable.swift */; };
@@ -58,7 +57,6 @@
 /* Begin PBXFileReference section */
 		1B00D0101CD9F6480007B8EE /* BotNetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BotNetworkService.swift; sourceTree = "<group>"; };
 		1B00D0121CDA052A0007B8EE /* TelegramBotAPITarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TelegramBotAPITarget.swift; sourceTree = "<group>"; };
-		1B00D0141CDA4D710007B8EE /* TelegramAPIBotDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TelegramAPIBotDecoder.swift; sourceTree = "<group>"; };
 		1B00D0161CDA4E250007B8EE /* Mappable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mappable.swift; sourceTree = "<group>"; };
 		1B00D0181CDA53740007B8EE /* Response+JSONMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Response+JSONMapper.swift"; sourceTree = "<group>"; };
 		1B26A47A1CC9137200BA0A9A /* Injectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Injectable.swift; sourceTree = "<group>"; };
@@ -196,7 +194,6 @@
 				1B9FA21D1CA5971A00C584AF /* BotStorageDefaults.swift */,
 				1B00D0101CD9F6480007B8EE /* BotNetworkService.swift */,
 				1B00D0121CDA052A0007B8EE /* TelegramBotAPITarget.swift */,
-				1B00D0141CDA4D710007B8EE /* TelegramAPIBotDecoder.swift */,
 				1B00D0181CDA53740007B8EE /* Response+JSONMapper.swift */,
 			);
 			name = Services;
@@ -441,7 +438,6 @@
 				1B00D0131CDA052A0007B8EE /* TelegramBotAPITarget.swift in Sources */,
 				1B9FA21E1CA5971A00C584AF /* BotStorageDefaults.swift in Sources */,
 				1B9FA2101CA57F9200C584AF /* BotCellViewModel.swift in Sources */,
-				1B00D0151CDA4D710007B8EE /* TelegramAPIBotDecoder.swift in Sources */,
 				1B9FA1E71CA578FB00C584AF /* AppDelegate.swift in Sources */,
 				1B00D0171CDA4E250007B8EE /* Mappable.swift in Sources */,
 				1B00D0111CD9F6480007B8EE /* BotNetworkService.swift in Sources */,

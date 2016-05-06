@@ -10,18 +10,28 @@ import Foundation
 import Moya
 
 struct BotNetworkService {
-    static let provider = MoyaProvider<TelegramBotAPITarget>()
+    static let provider = MoyaProvider<TelegramBotAPITarget>(plugins: [NetworkLoggerPlugin()])
     
-    static func request(target: TelegramBotAPITarget, successCallback: (AnyObject) -> Void, errorCallback: (statusCode: Int) -> Void, failureCallback: (Moya.Error) -> Void) {
+    static func request<T: Mappable>(target: TelegramBotAPITarget, successCallback: (T) -> Void, errorCallback: (statusCode: Int) -> Void, failureCallback: (Moya.Error) -> Void) {
         provider.request(target) {
             result in
             switch result {
             case let .Success(response):
-                // TODO: Decode the json with the decoder and return the decoded object to the success callback
-                successCallback(response.data)
+                do {
+                    try response.filterSuccessfulStatusCodes()
+                    let mappedObject = try response.mapObject(T)
+                    successCallback(mappedObject)
+                } catch Error.StatusCode(let response) {
+                    errorCallback(statusCode: response.statusCode)
+                } catch Error.JSONMapping(let response) {
+                    failureCallback(Error.JSONMapping(response))
+                } catch {
+                    failureCallback(Error.Underlying(error))
+                }
                 break
             case let .Failure(error):
                 failureCallback(error)
+                break
             }
         }
     }

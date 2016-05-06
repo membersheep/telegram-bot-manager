@@ -7,8 +7,17 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 struct Bot {
     var name: String
-    var token: String
+    var username: String
+    var token: String?
+}
+
+extension Bot: Mappable {
+    init?(jsonData: JSON) {
+        self.name = jsonData["result"]["first_name"].stringValue
+        self.username = jsonData["result"]["username"].stringValue
+    }
 }

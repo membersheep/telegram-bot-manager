@@ -11,9 +11,24 @@ import Foundation
 struct BotSearchViewModel {
     let botCellViewModel: BotCellViewModel?
     
-    func searchBotWithToken(token: String) -> BotSearchViewModel{
-        // TODO: Search with APIs
-        // Take the returned value and wrap it in the proper struct
-        return BotSearchViewModel(botCellViewModel: BotCellViewModel(botModel: Bot(name: "test", token: "test")))
+    func searchBotWithToken(token: String, completionCallback: (BotSearchViewModel?) -> Void) {
+        BotNetworkService.request(TelegramBotAPITarget.GetMe(token: token),
+                                  successCallback: {
+                                    (bot: Bot) -> Void in
+                                    let botModel = Bot(name: bot.name, username: bot.username, token: token)
+                                    let botCellViewModel = BotCellViewModel(botModel: botModel)
+                                    let botSearchViewModel = BotSearchViewModel(botCellViewModel: botCellViewModel)
+                                    completionCallback(botSearchViewModel)
+            },
+                                  errorCallback: {
+                                    statusCode in
+                                    print(statusCode)
+                                    completionCallback(nil)
+            },
+                                  failureCallback: {
+                                    error in
+                                    print(error)
+                                    completionCallback(nil)
+        });
     }
 }

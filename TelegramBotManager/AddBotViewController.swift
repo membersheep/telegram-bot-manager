@@ -96,7 +96,14 @@ extension AddBotViewController: UITableViewDelegate {
 
 extension AddBotViewController: SearchTableViewCellDelegate {
     func searchText(text: String) {
-        // TODO: Handle asyncronicity with a promise or an observable or a result object or whatever
-        botSearchViewModel = botSearchViewModel.searchBotWithToken(text)
+        botSearchViewModel.searchBotWithToken(text) {
+            optionalViewModel in
+            guard let newModel = optionalViewModel else {
+                // TODO: Trigger error alert with message or something
+                print("ALERT ERROR SEARCHING BOT")
+                return
+            }
+            self.botSearchViewModel = newModel
+        }
     }
 }

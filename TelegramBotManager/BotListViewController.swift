@@ -78,6 +78,11 @@ extension BotListViewController: UITableViewDelegate {
             botListViewModel = botListViewModel.removeBotNamed(cellName)
         }
     }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        // TODO: Find a better way to extract the height value from the cell.
+        return 82.0
+    }
 }
 
 extension BotListViewController: UITableViewDataSource {

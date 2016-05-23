@@ -15,9 +15,12 @@ protocol AddBotViewControllerDelegate {
 class AddBotViewController: UIViewController {
     static let identifier = "AddBotViewController"
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var addButton: UIButton!
+    
     private var botSearchViewModel: BotSearchViewModel! {
         didSet {
             reloadWithAnimation()
+            updateAddButton()
         }
     }
     
@@ -35,6 +38,15 @@ class AddBotViewController: UIViewController {
         let range = NSMakeRange(0, unwrappedTableView.numberOfSections)
         let sections = NSIndexSet(indexesInRange: range)
         unwrappedTableView.reloadSections(sections, withRowAnimation: .Automatic)
+    }
+    
+    func updateAddButton() {
+        addButton?.hidden = botSearchViewModel.botCellViewModel == nil
+    }
+    
+    @IBAction func addButtonPressed(sender: AnyObject) {
+        // TODO: Store current bot
+        print("ADD")
     }
 }
 
@@ -70,7 +82,7 @@ extension AddBotViewController: UITableViewDataSource {
         case 0:
             return NSLocalizedString("TOKEN", comment: "TOKEN")
         default:
-            return NSLocalizedString("BOT", comment: "BOT")
+            return (botSearchViewModel.botCellViewModel != nil) ? NSLocalizedString("BOT", comment: "BOT") : ""
         }
     }
     
@@ -92,6 +104,16 @@ extension AddBotViewController: UITableViewDelegate {
     func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 0
     }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        // TODO: Find a better way to extract the height value from the cell.
+        switch indexPath.section {
+        case 0:
+            return tableView.rowHeight
+        default:
+            return 82.0
+        }
+    }
 }
 
 extension AddBotViewController: SearchTableViewCellDelegate {
@@ -101,6 +123,7 @@ extension AddBotViewController: SearchTableViewCellDelegate {
             guard let newModel = optionalViewModel else {
                 // TODO: Trigger error alert with message or something
                 print("ALERT ERROR SEARCHING BOT")
+                self.botSearchViewModel = BotSearchViewModel(botCellViewModel: nil)
                 return
             }
             self.botSearchViewModel = newModel

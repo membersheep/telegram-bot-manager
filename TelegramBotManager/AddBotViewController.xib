@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddBotViewController" customModule="TelegramBotManager" customModuleProvider="target">
             <connections>
+                <outlet property="addButton" destination="8ft-PR-0ta" id="dDT-tG-yHK"/>
                 <outlet property="tableView" destination="gUI-7f-ycj" id="mfq-D5-V1i"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -25,16 +26,49 @@
                         <outlet property="delegate" destination="-1" id="ZQU-OK-aUw"/>
                     </connections>
                 </tableView>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ft-PR-0ta">
+                    <rect key="frame" x="160" y="629" width="55" height="30"/>
+                    <color key="backgroundColor" red="0.17254901960784313" green="0.6470588235294118" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="46" id="8cY-KV-2Uw"/>
+                        <constraint firstAttribute="height" constant="30" id="BzE-ju-nc6"/>
+                        <constraint firstAttribute="width" constant="55" id="FgE-cI-PYt"/>
+                    </constraints>
+                    <state key="normal" title="Add">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                    </userDefinedRuntimeAttributes>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="8cY-KV-2Uw"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="addButtonPressed:" destination="-1" eventType="touchUpInside" id="AmP-Jl-TYy"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="8ft-PR-0ta" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="7ku-oE-r8H"/>
                 <constraint firstAttribute="bottom" secondItem="gUI-7f-ycj" secondAttribute="bottom" id="He1-WY-GIZ"/>
                 <constraint firstItem="gUI-7f-ycj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Ibt-c8-KUR"/>
+                <constraint firstItem="8ft-PR-0ta" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="160" id="LPl-Sp-eHz"/>
                 <constraint firstItem="gUI-7f-ycj" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="Z7O-uG-Mda"/>
+                <constraint firstAttribute="bottom" secondItem="8ft-PR-0ta" secondAttribute="bottom" constant="8" id="mmc-w8-vj6"/>
+                <constraint firstAttribute="trailing" secondItem="8ft-PR-0ta" secondAttribute="trailing" constant="160" id="pqF-5v-1t8"/>
                 <constraint firstAttribute="trailing" secondItem="gUI-7f-ycj" secondAttribute="trailing" id="y4P-A7-8gC"/>
             </constraints>
             <nil key="simulatedBottomBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="LPl-Sp-eHz"/>
+                    <exclude reference="pqF-5v-1t8"/>
+                </mask>
+            </variation>
         </view>
     </objects>
 </document>

@@ -12,6 +12,8 @@
 		1B00D0131CDA052A0007B8EE /* TelegramBotAPITarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B00D0121CDA052A0007B8EE /* TelegramBotAPITarget.swift */; };
 		1B00D0171CDA4E250007B8EE /* Mappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B00D0161CDA4E250007B8EE /* Mappable.swift */; };
 		1B00D0191CDA53740007B8EE /* Response+JSONMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B00D0181CDA53740007B8EE /* Response+JSONMapper.swift */; };
+		1B2520BD1CF35B2900791FF3 /* AddBotViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2520BC1CF35B2900791FF3 /* AddBotViewControllerTests.swift */; };
+		1B2520C21CF35BE300791FF3 /* BotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2520C11CF35BE300791FF3 /* BotTests.swift */; };
 		1B26A47B1CC9137200BA0A9A /* Injectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B26A47A1CC9137200BA0A9A /* Injectable.swift */; };
 		1B631F1A1CD75C4300A8AA85 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B631F191CD75C4300A8AA85 /* AppCoordinator.swift */; };
 		1B631F1C1CD77E7700A8AA85 /* ListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B631F1B1CD77E7700A8AA85 /* ListCoordinator.swift */; };
@@ -59,6 +61,8 @@
 		1B00D0121CDA052A0007B8EE /* TelegramBotAPITarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TelegramBotAPITarget.swift; sourceTree = "<group>"; };
 		1B00D0161CDA4E250007B8EE /* Mappable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mappable.swift; sourceTree = "<group>"; };
 		1B00D0181CDA53740007B8EE /* Response+JSONMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Response+JSONMapper.swift"; sourceTree = "<group>"; };
+		1B2520BC1CF35B2900791FF3 /* AddBotViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBotViewControllerTests.swift; sourceTree = "<group>"; };
+		1B2520C11CF35BE300791FF3 /* BotTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BotTests.swift; sourceTree = "<group>"; };
 		1B26A47A1CC9137200BA0A9A /* Injectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Injectable.swift; sourceTree = "<group>"; };
 		1B631F191CD75C4300A8AA85 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		1B631F1B1CD77E7700A8AA85 /* ListCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCoordinator.swift; sourceTree = "<group>"; };
@@ -117,6 +121,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B2520BE1CF35BBF00791FF3 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				1BCF99D01CAAC164000AAACE /* BotCellViewModelTests.swift */,
+				1BCF99D21CAAC347000AAACE /* BotListViewModelTests.swift */,
+			);
+			name = ViewModels;
+			sourceTree = "<group>";
+		};
+		1B2520BF1CF35BC700791FF3 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1BCF99D81CABD013000AAACE /* BotListViewControllerTests.swift */,
+				1B2520BC1CF35B2900791FF3 /* AddBotViewControllerTests.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		1B2520C01CF35BCE00791FF3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1B9FA1FB1CA578FB00C584AF /* BotStorageDefaultsTests.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		1B2520C31CF35BE700791FF3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1B2520C11CF35BE300791FF3 /* BotTests.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		1B631F181CD75C1D00A8AA85 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
@@ -170,10 +208,10 @@
 			children = (
 				1BCF99E61CABD24B000AAACE /* Mocks */,
 				1B9FA1FD1CA578FB00C584AF /* Info.plist */,
-				1B9FA1FB1CA578FB00C584AF /* BotStorageDefaultsTests.swift */,
-				1BCF99D01CAAC164000AAACE /* BotCellViewModelTests.swift */,
-				1BCF99D21CAAC347000AAACE /* BotListViewModelTests.swift */,
-				1BCF99D81CABD013000AAACE /* BotListViewControllerTests.swift */,
+				1B2520C01CF35BCE00791FF3 /* Services */,
+				1B2520C31CF35BE700791FF3 /* Models */,
+				1B2520BE1CF35BBF00791FF3 /* ViewModels */,
+				1B2520BF1CF35BC700791FF3 /* ViewControllers */,
 			);
 			path = TelegramBotManagerTests;
 			sourceTree = "<group>";
@@ -454,9 +492,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BCF99E81CABD25D000AAACE /* BotStorageMock.swift in Sources */,
+				1B2520C21CF35BE300791FF3 /* BotTests.swift in Sources */,
 				1BCF99D91CABD013000AAACE /* BotListViewControllerTests.swift in Sources */,
 				1BCF99D11CAAC164000AAACE /* BotCellViewModelTests.swift in Sources */,
 				1B9FA1FC1CA578FB00C584AF /* BotStorageDefaultsTests.swift in Sources */,
+				1B2520BD1CF35B2900791FF3 /* AddBotViewControllerTests.swift in Sources */,
 				1BCF99D31CAAC347000AAACE /* BotListViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

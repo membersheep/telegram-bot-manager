@@ -10,8 +10,8 @@ import Foundation
 import SwiftyJSON
 
 struct Bot {
-    var name: String
-    var username: String
+    let name: String
+    let username: String
     var token: String?
 }
 

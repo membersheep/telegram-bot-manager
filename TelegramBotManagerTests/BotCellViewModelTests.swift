@@ -15,7 +15,7 @@ class BotCellViewModelTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        botCellViewModel = BotCellViewModel(botModel: Bot(name: "test", token: "token"))
+        botCellViewModel = BotCellViewModel(botModel: Bot(name: "test", username: "test", token: "token"))
     }
     
     override func tearDown() {
@@ -28,7 +28,7 @@ class BotCellViewModelTests: XCTestCase {
     }
     
     func testBotCellViewModelPresentsBotName() {
-        let bot = Bot(name: "test", token: "token")
+        let bot = Bot(name: "test", username: "test", token: "token")
         botCellViewModel = BotCellViewModel(botModel: bot)
         
         XCTAssertEqual(botCellViewModel?.text, bot.name)

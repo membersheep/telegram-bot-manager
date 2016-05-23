@@ -15,6 +15,7 @@ class BotStorageDefaultsTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
+        clearDefaults()
         botStorageDefaults = BotStorageDefaults()
     }
     
@@ -34,7 +35,7 @@ class BotStorageDefaultsTests: XCTestCase {
     func testSaveBotStoresABot() {
         XCTAssertTrue(botStorageDefaults.storedBots.isEmpty)
         
-        botStorageDefaults.saveBot(Bot(name: "test", token: "token"))
+        botStorageDefaults.saveBot(Bot(name: "test", username: "test", token: "token"))
         
         XCTAssertFalse(botStorageDefaults.storedBots.isEmpty)
         XCTAssertEqual(botStorageDefaults.storedBots[0].name, "test")
@@ -44,11 +45,11 @@ class BotStorageDefaultsTests: XCTestCase {
     func testSaveBotStoresMultipleBots() {
         XCTAssertTrue(botStorageDefaults.storedBots.isEmpty)
         
-        botStorageDefaults.saveBot(Bot(name: "test0", token: "token"))
-        botStorageDefaults.saveBot(Bot(name: "test1", token: "token"))
-        botStorageDefaults.saveBot(Bot(name: "test2", token: "token"))
-        botStorageDefaults.saveBot(Bot(name: "test3", token: "token"))
-        botStorageDefaults.saveBot(Bot(name: "test4", token: "token"))
+        botStorageDefaults.saveBot(Bot(name: "test0", username: "test", token: "token"))
+        botStorageDefaults.saveBot(Bot(name: "test1", username: "test", token: "token"))
+        botStorageDefaults.saveBot(Bot(name: "test2", username: "test", token: "token"))
+        botStorageDefaults.saveBot(Bot(name: "test3", username: "test", token: "token"))
+        botStorageDefaults.saveBot(Bot(name: "test4", username: "test", token: "token"))
         
         XCTAssertFalse(botStorageDefaults.storedBots.isEmpty)
         XCTAssertEqual(botStorageDefaults.storedBots.count, 5)
@@ -56,16 +57,16 @@ class BotStorageDefaultsTests: XCTestCase {
     
     func testSaveBotOverwritesExistingBot() {
         XCTAssertTrue(botStorageDefaults.storedBots.isEmpty)
-        botStorageDefaults.saveBot(Bot(name: "test", token: "token"))
+        botStorageDefaults.saveBot(Bot(name: "test", username: "test", token: "token"))
         
-        botStorageDefaults.saveBot(Bot(name: "test", token: "modifiedToken"))
+        botStorageDefaults.saveBot(Bot(name: "test", username: "test", token: "modifiedToken"))
         
         XCTAssertEqual(botStorageDefaults.storedBots.count, 1)
         XCTAssertTrue(botStorageDefaults.storedBots.filter{ $0.name == "test" }[0].token == "modifiedToken")
     }
     
     func testRemoveBotRemovesABot() {
-        botStorageDefaults.saveBot(Bot(name: "test", token: "token"))
+        botStorageDefaults.saveBot(Bot(name: "test", username: "test", token: "token"))
         XCTAssertFalse(botStorageDefaults.storedBots.isEmpty)
         
         botStorageDefaults.removeBotNamed("test")

@@ -22,7 +22,12 @@ struct BotListViewModel {
     func removeBotNamed(name: String) -> BotListViewModel {
         botStorage.removeBotNamed(name)
         return BotListViewModel(botStorage: botStorage)
-    }    
+    }
+    
+    func saveBot(botViewModel: BotCellViewModel) -> BotListViewModel {
+        botStorage.saveBot(botViewModel.botModel)
+        return BotListViewModel(botStorage: botStorage)
+    }
 }
 
 extension BotListViewModel: CollectionType {

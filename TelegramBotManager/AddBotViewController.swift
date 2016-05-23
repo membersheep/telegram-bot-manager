@@ -8,14 +8,15 @@
 
 import UIKit
 
-protocol AddBotViewControllerDelegate {
-    func dismissiActionPerformed()
+protocol AddBotViewControllerDelegate: class {
+    func dismissiActionPerformed(newBot: BotCellViewModel?)
 }
 
 class AddBotViewController: UIViewController {
     static let identifier = "AddBotViewController"
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addButton: UIButton!
+    weak var delegate: AddBotViewControllerDelegate?
     
     private var botSearchViewModel: BotSearchViewModel! {
         didSet {
@@ -45,8 +46,7 @@ class AddBotViewController: UIViewController {
     }
     
     @IBAction func addButtonPressed(sender: AnyObject) {
-        // TODO: Store current bot
-        print("ADD")
+        delegate?.dismissiActionPerformed(botSearchViewModel.botCellViewModel)
     }
 }
 

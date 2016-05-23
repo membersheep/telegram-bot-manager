@@ -38,11 +38,16 @@ extension ListCoordinator: Coordinator {
         let viewModel = BotSearchViewModel(botCellViewModel: nil)
         let addController = AddBotViewController(nibName: AddBotViewController.identifier, bundle: nil)
         addController.inject(viewModel)
+        addController.delegate = self
         navigationController.topViewController?.presentViewController(addController, animated: true, completion: nil)
     }
     
-    func dismissAdd() {
-        
+    func dismissAdd(updatedBotList: BotListViewModel) {
+        navigationController.topViewController?.dismissViewControllerAnimated(true, completion: nil)
+        guard let listController = navigationController.topViewController as? BotListViewController else {
+            return
+        }
+        listController.inject(updatedBotList)
     }
 }
 
@@ -57,7 +62,13 @@ extension ListCoordinator: BotListViewControllerDelegate {
 }
 
 extension ListCoordinator: AddBotViewControllerDelegate {
-    func dismissiActionPerformed() {
-        dismissAdd()
+    func dismissiActionPerformed(newBot: BotCellViewModel?) {
+        let botStorage = BotStorageDefaults()
+        let botListViewModel = BotListViewModel(botStorage: botStorage)
+        guard let unwrappedBot = newBot else {
+            dismissAdd(botListViewModel)
+            return
+        }
+        dismissAdd(botListViewModel.saveBot(unwrappedBot))
     }
 }

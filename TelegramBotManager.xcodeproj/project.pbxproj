@@ -30,6 +30,8 @@
 		1B9FA21B1CA5899E00C584AF /* TextPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9FA21A1CA5899E00C584AF /* TextPresentable.swift */; };
 		1B9FA21E1CA5971A00C584AF /* BotStorageDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9FA21D1CA5971A00C584AF /* BotStorageDefaults.swift */; };
 		1BA1F18C1CF44B6C00F937D8 /* CircularCloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA1F18B1CF44B6C00F937D8 /* CircularCloseButton.swift */; };
+		1BA1F18E1CF4838500F937D8 /* BotSearchViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA1F18D1CF4838500F937D8 /* BotSearchViewModelTests.swift */; };
+		1BA1F1901CF4859400F937D8 /* Response+JSONMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA1F18F1CF4859400F937D8 /* Response+JSONMapperTests.swift */; };
 		1BCF99CF1CAABE36000AAACE /* BotListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCF99CE1CAABE36000AAACE /* BotListViewModel.swift */; };
 		1BCF99D11CAAC164000AAACE /* BotCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCF99D01CAAC164000AAACE /* BotCellViewModelTests.swift */; };
 		1BCF99D31CAAC347000AAACE /* BotListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCF99D21CAAC347000AAACE /* BotListViewModelTests.swift */; };
@@ -84,6 +86,8 @@
 		1B9FA21A1CA5899E00C584AF /* TextPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextPresentable.swift; sourceTree = "<group>"; };
 		1B9FA21D1CA5971A00C584AF /* BotStorageDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BotStorageDefaults.swift; sourceTree = "<group>"; };
 		1BA1F18B1CF44B6C00F937D8 /* CircularCloseButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularCloseButton.swift; sourceTree = "<group>"; };
+		1BA1F18D1CF4838500F937D8 /* BotSearchViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BotSearchViewModelTests.swift; sourceTree = "<group>"; };
+		1BA1F18F1CF4859400F937D8 /* Response+JSONMapperTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Response+JSONMapperTests.swift"; sourceTree = "<group>"; };
 		1BCF99CE1CAABE36000AAACE /* BotListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BotListViewModel.swift; sourceTree = "<group>"; };
 		1BCF99D01CAAC164000AAACE /* BotCellViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BotCellViewModelTests.swift; sourceTree = "<group>"; };
 		1BCF99D21CAAC347000AAACE /* BotListViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BotListViewModelTests.swift; sourceTree = "<group>"; };
@@ -128,6 +132,7 @@
 			children = (
 				1BCF99D01CAAC164000AAACE /* BotCellViewModelTests.swift */,
 				1BCF99D21CAAC347000AAACE /* BotListViewModelTests.swift */,
+				1BA1F18D1CF4838500F937D8 /* BotSearchViewModelTests.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -214,6 +219,7 @@
 				1B2520C31CF35BE700791FF3 /* Models */,
 				1B2520BE1CF35BBF00791FF3 /* ViewModels */,
 				1B2520BF1CF35BC700791FF3 /* ViewControllers */,
+				1BA1F18F1CF4859400F937D8 /* Response+JSONMapperTests.swift */,
 			);
 			path = TelegramBotManagerTests;
 			sourceTree = "<group>";
@@ -234,7 +240,6 @@
 				1B9FA21D1CA5971A00C584AF /* BotStorageDefaults.swift */,
 				1B00D0101CD9F6480007B8EE /* BotNetworkService.swift */,
 				1B00D0121CDA052A0007B8EE /* TelegramBotAPITarget.swift */,
-				1B00D0181CDA53740007B8EE /* Response+JSONMapper.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -280,6 +285,7 @@
 				1BEFB3381CD8FDBE0080BA27 /* ImagePresentable.swift */,
 				1B26A47A1CC9137200BA0A9A /* Injectable.swift */,
 				1B00D0161CDA4E250007B8EE /* Mappable.swift */,
+				1B00D0181CDA53740007B8EE /* Response+JSONMapper.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -496,7 +502,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BCF99E81CABD25D000AAACE /* BotStorageMock.swift in Sources */,
+				1BA1F1901CF4859400F937D8 /* Response+JSONMapperTests.swift in Sources */,
 				1B2520C21CF35BE300791FF3 /* BotTests.swift in Sources */,
+				1BA1F18E1CF4838500F937D8 /* BotSearchViewModelTests.swift in Sources */,
 				1BCF99D91CABD013000AAACE /* BotListViewControllerTests.swift in Sources */,
 				1BCF99D11CAAC164000AAACE /* BotCellViewModelTests.swift in Sources */,
 				1B9FA1FC1CA578FB00C584AF /* BotStorageDefaultsTests.swift in Sources */,

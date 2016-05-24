@@ -29,6 +29,7 @@
 		1B9FA2161CA57FF400C584AF /* BotStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9FA2151CA57FF400C584AF /* BotStorage.swift */; };
 		1B9FA21B1CA5899E00C584AF /* TextPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9FA21A1CA5899E00C584AF /* TextPresentable.swift */; };
 		1B9FA21E1CA5971A00C584AF /* BotStorageDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9FA21D1CA5971A00C584AF /* BotStorageDefaults.swift */; };
+		1BA1F18C1CF44B6C00F937D8 /* CircularCloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA1F18B1CF44B6C00F937D8 /* CircularCloseButton.swift */; };
 		1BCF99CF1CAABE36000AAACE /* BotListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCF99CE1CAABE36000AAACE /* BotListViewModel.swift */; };
 		1BCF99D11CAAC164000AAACE /* BotCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCF99D01CAAC164000AAACE /* BotCellViewModelTests.swift */; };
 		1BCF99D31CAAC347000AAACE /* BotListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCF99D21CAAC347000AAACE /* BotListViewModelTests.swift */; };
@@ -82,6 +83,7 @@
 		1B9FA2151CA57FF400C584AF /* BotStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BotStorage.swift; sourceTree = "<group>"; };
 		1B9FA21A1CA5899E00C584AF /* TextPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextPresentable.swift; sourceTree = "<group>"; };
 		1B9FA21D1CA5971A00C584AF /* BotStorageDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BotStorageDefaults.swift; sourceTree = "<group>"; };
+		1BA1F18B1CF44B6C00F937D8 /* CircularCloseButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularCloseButton.swift; sourceTree = "<group>"; };
 		1BCF99CE1CAABE36000AAACE /* BotListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BotListViewModel.swift; sourceTree = "<group>"; };
 		1BCF99D01CAAC164000AAACE /* BotCellViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BotCellViewModelTests.swift; sourceTree = "<group>"; };
 		1BCF99D21CAAC347000AAACE /* BotListViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BotListViewModelTests.swift; sourceTree = "<group>"; };
@@ -266,6 +268,7 @@
 				1BEFB32E1CD8B0720080BA27 /* SearchTableViewCell.swift */,
 				1BEFB32F1CD8B0720080BA27 /* SearchTableViewCell.xib */,
 				1BCF99ED1CAC0CB9000AAACE /* CircularAddButton.swift */,
+				1BA1F18B1CF44B6C00F937D8 /* CircularCloseButton.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -472,6 +475,7 @@
 				1BEFB33B1CD901A40080BA27 /* BotSearchViewModel.swift in Sources */,
 				1BCF99EE1CAC0CB9000AAACE /* CircularAddButton.swift in Sources */,
 				1B00D0191CDA53740007B8EE /* Response+JSONMapper.swift in Sources */,
+				1BA1F18C1CF44B6C00F937D8 /* CircularCloseButton.swift in Sources */,
 				1B26A47B1CC9137200BA0A9A /* Injectable.swift in Sources */,
 				1B00D0131CDA052A0007B8EE /* TelegramBotAPITarget.swift in Sources */,
 				1B9FA21E1CA5971A00C584AF /* BotStorageDefaults.swift in Sources */,

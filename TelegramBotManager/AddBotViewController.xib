@@ -8,6 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddBotViewController" customModule="TelegramBotManager" customModuleProvider="target">
             <connections>
                 <outlet property="addButton" destination="8ft-PR-0ta" id="dDT-tG-yHK"/>
+                <outlet property="closeButton" destination="Xzi-G4-9ME" id="pxb-cJ-qXM"/>
                 <outlet property="tableView" destination="gUI-7f-ycj" id="mfq-D5-V1i"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -27,26 +28,34 @@
                     </connections>
                 </tableView>
                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ft-PR-0ta">
-                    <rect key="frame" x="160" y="629" width="55" height="30"/>
+                    <rect key="frame" x="0.0" y="615" width="375" height="44"/>
                     <color key="backgroundColor" red="0.17254901960784313" green="0.6470588235294118" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="46" id="8cY-KV-2Uw"/>
-                        <constraint firstAttribute="height" constant="30" id="BzE-ju-nc6"/>
+                        <constraint firstAttribute="height" constant="44" id="BzE-ju-nc6"/>
                         <constraint firstAttribute="width" constant="55" id="FgE-cI-PYt"/>
                     </constraints>
                     <state key="normal" title="Add">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
-                    </userDefinedRuntimeAttributes>
                     <variation key="default">
                         <mask key="constraints">
                             <exclude reference="8cY-KV-2Uw"/>
+                            <exclude reference="FgE-cI-PYt"/>
                         </mask>
                     </variation>
                     <connections>
                         <action selector="addButtonPressed:" destination="-1" eventType="touchUpInside" id="AmP-Jl-TYy"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xzi-G4-9ME" customClass="CircularCloseButton" customModule="TelegramBotManager" customModuleProvider="target">
+                    <rect key="frame" x="327" y="28" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="AUZ-kU-jgS"/>
+                        <constraint firstAttribute="height" constant="40" id="dy1-NV-cpk"/>
+                    </constraints>
+                    <connections>
+                        <action selector="closeButtonPressed:" destination="-1" eventType="touchUpInside" id="Ldi-Ua-CE3"/>
                     </connections>
                 </button>
             </subviews>
@@ -57,8 +66,11 @@
                 <constraint firstItem="gUI-7f-ycj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Ibt-c8-KUR"/>
                 <constraint firstItem="8ft-PR-0ta" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="160" id="LPl-Sp-eHz"/>
                 <constraint firstItem="gUI-7f-ycj" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="Z7O-uG-Mda"/>
+                <constraint firstItem="Xzi-G4-9ME" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="28" id="alj-2e-pbh"/>
+                <constraint firstItem="8ft-PR-0ta" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="f8s-bW-lqp"/>
                 <constraint firstAttribute="bottom" secondItem="8ft-PR-0ta" secondAttribute="bottom" constant="8" id="mmc-w8-vj6"/>
                 <constraint firstAttribute="trailing" secondItem="8ft-PR-0ta" secondAttribute="trailing" constant="160" id="pqF-5v-1t8"/>
+                <constraint firstAttribute="trailing" secondItem="Xzi-G4-9ME" secondAttribute="trailing" constant="8" id="vbK-9q-G2X"/>
                 <constraint firstAttribute="trailing" secondItem="gUI-7f-ycj" secondAttribute="trailing" id="y4P-A7-8gC"/>
             </constraints>
             <nil key="simulatedBottomBarMetrics"/>

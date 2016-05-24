@@ -16,6 +16,7 @@ class AddBotViewController: UIViewController {
     static let identifier = "AddBotViewController"
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addButton: UIButton!
+    @IBOutlet weak var closeButton: CircularCloseButton!
     weak var delegate: AddBotViewControllerDelegate?
     
     private var botSearchViewModel: BotSearchViewModel! {
@@ -30,6 +31,7 @@ class AddBotViewController: UIViewController {
         self.tableView.registerNib(UINib(nibName: SearchTableViewCell.identifier, bundle:nil), forCellReuseIdentifier: SearchTableViewCell.identifier)
         self.tableView.registerNib(UINib(nibName: BotTableViewCell.identifier, bundle:nil), forCellReuseIdentifier: BotTableViewCell.identifier)
         self.view.backgroundColor = UIColor.mainColor()
+        closeButton.circleColor = UIColor.lightMainColor()
     }
     
     func reloadWithAnimation() {
@@ -47,6 +49,10 @@ class AddBotViewController: UIViewController {
     
     @IBAction func addButtonPressed(sender: AnyObject) {
         delegate?.dismissiActionPerformed(botSearchViewModel.botCellViewModel)
+    }
+    
+    @IBAction func closeButtonPressed(sender: AnyObject) {
+        delegate?.dismissiActionPerformed(nil)
     }
 }
 

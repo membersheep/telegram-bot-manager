@@ -73,4 +73,10 @@ class BotStorageDefaultsTests: XCTestCase {
         
         XCTAssertTrue(botStorageDefaults.storedBots.isEmpty)
     }
+    
+    func testRemoveBotOnEmptyStore() {
+        botStorageDefaults.removeBotNamed("")
+        
+        XCTAssertTrue(botStorageDefaults.storedBots.isEmpty)
+    }
 }

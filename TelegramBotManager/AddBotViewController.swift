@@ -30,6 +30,7 @@ class AddBotViewController: UIViewController {
         super.viewDidLoad()
         self.tableView.registerNib(UINib(nibName: SearchTableViewCell.identifier, bundle:nil), forCellReuseIdentifier: SearchTableViewCell.identifier)
         self.tableView.registerNib(UINib(nibName: BotTableViewCell.identifier, bundle:nil), forCellReuseIdentifier: BotTableViewCell.identifier)
+        assertDependencies()
         self.view.backgroundColor = UIColor.mainColor()
         closeButton.circleColor = UIColor.lightMainColor()
     }
@@ -66,6 +67,8 @@ extension AddBotViewController: Injectable {
         assert(tableView != nil, "Table view must be set")
         assert(tableView.delegate != nil, "Table view should have a delegate set")
         assert(tableView.dataSource != nil, "Table view should have a data source set")
+        assert(addButton != nil, "Add button must be set")
+        assert(closeButton != nil, "Close button must be set")
     }
 }
 
